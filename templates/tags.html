@@ -6,7 +6,7 @@
 
 {% block content %}
   <h1>Tags on {{ SITENAME }}</h1>
-  <ul class="list-unstyled">
+  <ul class="list-unstyled index">
     {% for tag, articles in tags|sort %}
       <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
     {% endfor %}

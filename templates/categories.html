@@ -6,7 +6,7 @@
 
 {% block content %}
   <h1>Categories on {{ SITENAME }}</h1>
-  <ul class="list-unstyled">
+  <ul class="list-unstyled index">
     {% for category, articles in categories %}
       <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
     {% endfor %}

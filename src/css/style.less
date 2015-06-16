@@ -21,6 +21,8 @@
 @banner-margin: 30px;
 @banner-padding: 30px 0;
 
+@list-font-size: 120%;
+
 @content-size: 150%;
 
 
@@ -48,12 +50,14 @@ samp {
 }
 
 .a() {
-    a,
-    a:hover,
-    a:visited,
-    a:active {
-        color: @color-text;
-        text-decoration: none;
+    a {
+        &,
+        &:hover,
+        &:visited,
+        &:active {
+            color: @color-text;
+            text-decoration: none;
+        }
     }
 }
 
@@ -180,7 +184,7 @@ samp {
     }
 }
 
-.post-date{
+.post-date {
     a {
         color: lighten(@color-text, 40%);
     }
@@ -195,4 +199,16 @@ samp {
 .separator {
     margin-bottom: 30px;
     margin-top: 30px;
+}
+
+.index {
+    li,
+    dt {
+        margin-top: 1em;
+        font-size: @list-font-size;
+    }
+    dd {
+        padding-top: 1em;
+        font-size: @list-font-size;
+    }
 }

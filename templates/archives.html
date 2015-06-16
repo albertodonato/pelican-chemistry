@@ -6,7 +6,7 @@
 
 {% block content %}
   <h1>Archives</h1>
-  <dl class="list dl-horizontal">
+  <dl class="list dl-horizontal index">
     {% for article in dates %}
       <dt>{{ article.locale_date }}</dt>
       <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
