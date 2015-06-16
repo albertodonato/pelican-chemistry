@@ -12,12 +12,12 @@
   {% endblock %}
   <div>
     {% for article in articles_page.object_list %}
-      <div class="post mini-post">
+      <article class="post mini-post">
         <div class="row">
-          <div class="col-md-4">
-            <p class="post-date">
+          <aside class="col-md-4">
+            <time class="post-date">
               <a class="text-muted" href="{{ SITEURL }}/{{ article.url }}" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</a>
-            </p>
+            </time>
             <p class="post-category">
               <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
             </p>
@@ -26,7 +26,7 @@
                 By <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
               </address>
             {% endif %}
-          </div>
+          </aside>
           <div class="col-md-8">
             <h2 class="post-title">
               <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
@@ -40,9 +40,8 @@
             </div>
           </div>
         </div>
-      </div>
+      </article>
     {% endfor %}
   </div>
   {% include 'include/pagination.html' %}
-</div>
 {% endblock %}
