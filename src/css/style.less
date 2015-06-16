@@ -1,8 +1,8 @@
 // -*- mode: less-css -*-
 
-@import (less) "bootstrap.css";
+@import (inline) "bootstrap.css";
 @import (less) "lesshat-prefixed.less";
-@import (less) "pygments.css";
+@import (inline) "pygments.css";
 
 @font: "Ubuntu";
 @font-medium: "Ubuntu Medium";
@@ -11,11 +11,15 @@
 
 @color-bg-light: #fafafa;
 @color-bg-dark: #efefef;
-@color-text: #333333;
+@color-text: #333;
+@color-footer-text: #808080;
 @color-links: #c7254e;
 
-@border: 1px solid #dddddd;
-@border-bar: 5px solid #333333;
+@border: 1px solid #ddd;
+@border-bar: 5px solid #333;
+
+@banner-margin: 30px;
+@banner-padding: 30px 0;
 
 @content-size: 150%;
 
@@ -59,17 +63,15 @@ a:active {
     background-color: @color-bg-dark;
     border-bottom: @border;
     border-top: @border-bar;
-    margin-bottom: 30px;
-    padding: 30px 0;
-    .header-image {
-        margin-right: 30px;
-        width: 200px;
-    }
+    margin-bottom: @banner-margin;
+    padding: @banner-padding;
+
     .header-name {
         font-family: @font-medium;
-        font-size: 400%;
+        font-size: 420%;
         margin-top: 0;
     }
+
     .header-text {
         color: lighten(@color-text, 20%);
         font-size: 180%;
@@ -78,13 +80,16 @@ a:active {
         margin-top: 0;
         margin-left: 15px;
     }
+
     .header-menu {
         font-size: 150%;
         margin-bottom: 0;
         li {
+
             &:first-child {
                 padding-left: 0;
             }
+
             &:last-child {
                 padding-right: 0;
             }
@@ -94,33 +99,35 @@ a:active {
 
 .footer {
     background-color: @color-bg-dark;
-    color: grey;
+    color: @color-footer-text;
     border-top: @border;
     border-bottom: @border-bar;
     font-size: 80%;
-    margin-top: 30px;
-    padding: 30px 0;
+    margin-top: @banner-margin;
+    padding: @banner-padding;
+
     .footer-menu {
         font-size: 140%;
     }
 }
 
 .post {
-    font-size: 16px;
+    font-size: 110%;
     &.mini-post {
         border-bottom: @border;
         padding: 30px 0;
         &:last-child {
             border-bottom: none;
         }
+
         .post-title {
             font-size: 150%;
             line-height: 1.42857143; // Bootstrap rule
-            margin-bottom: 10px;
+            margin-bottom: 1em;
             margin-top: 0;
         }
+
         .post-date a {
-            color: lighten(@color-text, 40%);
             font-size: 120%;
         }
 
@@ -128,6 +135,7 @@ a:active {
             font-size: 100%;
         }
     }
+
     .post-content {
         margin-top: 20px;
         img {
@@ -138,24 +146,13 @@ a:active {
         }
         pre,
         img {
-            border-radius: 4px;
+            .lh-border-radius(4px);
         }
         p {
             font-size: @content-size;
             text-align: justify;
             line-height: @content-size;
         }
-        a {
-            color: @color-links;
-            &:hover {
-                color: lighten(@color-links, 10%);
-                text-decoration: underline;
-            }
-            &:visited {
-                text-decoration: none;
-            }
-        }
-
         pre {
             font-size: 125%;
             padding: 1em;
@@ -164,6 +161,20 @@ a:active {
         pre {
             margin-bottom: 1.5em;
         }
+        a {
+            color: @color-links;
+            &:hover {
+                color: lighten(@color-links, 10%);
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
+.post-date{
+    a {
+        color: lighten(@color-text, 40%);
     }
 }
 
