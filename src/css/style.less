@@ -47,12 +47,20 @@ samp {
     border: @border;
 }
 
-a,
-a:hover,
-a:visited,
-a:active {
-    color: @color-text;
-    text-decoration: none;
+.a() {
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+        color: @color-text;
+        text-decoration: none;
+    }
+}
+
+.a();
+
+.pagination {
+    .a();
 }
 
 .container {
