@@ -13,7 +13,7 @@
 @color-bg-dark: #efefef;
 @color-text: #333;
 @color-footer-text: #808080;
-@color-links: #c7254e;
+@color-link: #c7254e;
 
 @border: 1px solid #ddd;
 @border-bar: 5px solid #333;
@@ -53,12 +53,16 @@ samp {
 
 .a() {
     a {
+        .lh-transition(color 0.2s ease-in-out);
         &,
         &:hover,
         &:visited,
         &:active {
             color: @color-text;
             text-decoration: none;
+        }
+        &:hover {
+            color: @color-link;
         }
     }
 }
@@ -176,9 +180,9 @@ samp {
             margin-bottom: 1.5em;
         }
         a {
-            color: @color-links;
+            color: @color-link;
             &:hover {
-                color: lighten(@color-links, 10%);
+                color: lighten(@color-link, 20%);
                 text-decoration: underline;
             }
         }

@@ -2,8 +2,9 @@
 pelican-chemistry
 =================
 
-A `Pelican <http://blog.getpelican.com/>`_ theme based on the `pelican-alchemy
-<https://github.com/nairobilug/pelican-alchemy>`_ one, tweaked and reworked.
+A `Pelican <http://blog.getpelican.com/>`_ theme based on `pelican-alchemy
+<https://github.com/nairobilug/pelican-alchemy>`_, with some tweaks and
+reworks.
 
 
 Rebuild CSS
