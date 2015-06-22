@@ -25,7 +25,7 @@
 
 @list-font-size: 120%;
 
-@content-size: 150%;
+@content-size: 110%;
 
 
 body {
@@ -41,6 +41,8 @@ h4,
 h5,
 h6 {
     font-family: @font;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
 }
 
 code,
@@ -68,6 +70,12 @@ samp {
 }
 
 .a();
+
+
+.content() {
+    font-size: @content-size;
+    line-height: @content-size + 20%;
+}
 
 .pagination {
     .a();
@@ -130,7 +138,7 @@ samp {
 }
 
 .post {
-    font-size: 110%;
+    font-size: 135%;
     &.mini-post {
         border-bottom: @border;
         padding: 30px 0;
@@ -148,10 +156,6 @@ samp {
         .post-date a {
             font-size: 120%;
         }
-
-        .post-category a {
-            font-size: 100%;
-        }
     }
 
     .post-content {
@@ -167,8 +171,7 @@ samp {
             .lh-border-radius(4px);
         }
         p {
-            font-size: @content-size;
-            line-height: @content-size;
+            .content();
         }
         pre {
             font-size: 125%;
@@ -176,7 +179,7 @@ samp {
         }
         p,
         pre {
-            margin-bottom: 1.5em;
+            margin-bottom: 1em;
         }
         a {
             color: @color-link;
@@ -197,7 +200,7 @@ samp {
 
 .page {
     .content {
-        font-size: @content-size;
+        .content();
     }
 }
 
