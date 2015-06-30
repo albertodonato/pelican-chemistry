@@ -1,17 +1,24 @@
 STATICDIR = static
-SRCDIR = src
-SRCCSSDIR = $(SRCDIR)/css
-CSSDIR = $(STATICDIR)/css
 
-PYGMENTS_CSS = $(SRCCSSDIR)/pygments.css
+CSSDIR = $(STATICDIR)/css
+STYLE_CSS = $(CSSDIR)/style.min.css
+PYGMENTS_CSS = $(CSSDIR)/pygments.min.css
 PYGMENTS_STYLE ?= default
+
+LESSC = lessc -x
 
 all: css
 
-css: $(PYGMENTS_CSS) $(CSSDIR)/style.min.css
+css: $(PYGMENTS_CSS) $(STYLE_CSS)
 
-$(CSSDIR)/style.min.css : $(SRCCSSDIR)/style.less  
-	lessc --verbose -x $< $@
+pygments:
+	pygmentize -S $(PYGMENTS_STYLE) -f html | $(LESSC) - > $(PYGMENTS_CSS)
 
-pygments $(PYGMENTS_CSS):
-	pygmentize -S $(PYGMENTS_STYLE) -f html > $(PYGMENTS_CSS)
+$(PYGMENTS_CSS):
+	pygmentize -S $(PYGMENTS_STYLE) -f html | $(LESSC) - > $@
+
+%.min.css: %.css
+%.min.css: %.less
+	$(LESSC) $< $@
+
+.PHONY: pygments

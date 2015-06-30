@@ -1,13 +1,9 @@
 // -*- mode: less-css -*-
 
-@import (inline) "bootstrap.css";
-@import (less) "lesshat-prefixed.less";
-@import (inline) "pygments.css";
-
 @font: "Ubuntu";
 @font-medium: "Ubuntu Medium";
 @font-light: "Ubuntu Light";
-@font-monospace: "Ubuntu Mono";
+@font-mono: "Ubuntu Mono";
 
 @color-bg-light: #fafafa;
 @color-bg-dark: #efefef;
@@ -49,13 +45,13 @@ code,
 kbd,
 pre,
 samp {
-    font-family: @font-monospace;
+    font-family: @font-mono;
     border: @border;
 }
 
 .a() {
     a {
-        .lh-transition(color 0.2s ease-in-out);
+        // .lh-transition(color 0.2s ease-in-out);
         &,
         &:hover,
         &:visited,
@@ -85,7 +81,7 @@ samp {
     max-width: 970px;
 }
 
-.header {
+header {
     background-color: @color-bg-dark;
     border-bottom: @border;
     border-top: @border-bar;
@@ -123,7 +119,7 @@ samp {
     }
 }
 
-.footer {
+footer {
     background-color: @color-bg-dark;
     color: @color-footer-text;
     border-top: @border;
@@ -168,7 +164,7 @@ samp {
         }
         pre,
         img {
-            .lh-border-radius(4px);
+            border-radius: 4px;
         }
         p {
             .content();
