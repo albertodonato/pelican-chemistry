@@ -15,8 +15,8 @@
 @border-bar: 5px solid #333;
 @border-radius: 4px;
 
-@banner-margin: 30px;
-@banner-padding: 30px 0;
+@banner-margin: 2em;
+@banner-padding: 2em 0;
 
 @list-separator-spacing: 0.5em;
 
@@ -38,7 +38,7 @@ h4,
 h5,
 h6 {
     margin-top: 1em;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.7em;
 }
 
 h1 {
@@ -90,9 +90,9 @@ header {
         color: lighten(@color-text, 20%);
         font-size: 160%;
         font-style: italic;
-        margin-bottom: 51px;
+        margin-bottom: 1.2em;
         margin-top: 0;
-        margin-left: 15px;
+        margin-left: 1em;
     }
 
     nav ul {
@@ -172,8 +172,7 @@ footer {
         a {
             color: @color-link;
             &:hover {
-                color: lighten(@color-link, 20%);
-                text-decoration: underline;
+                border-bottom: 1px dotted;
             }
         }
 
