@@ -5,10 +5,14 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Authors on {{ SITENAME }}</h1>
-  <ul class="list-unstyled">
+  <h1>Authors</h1>
+
+  <ul class="list-unstyled list-index">
     {% for author, articles in authors|sort %}
-      <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
+      <li>
+        <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+        <span class="badge">{{ articles|count }}</span>
+      </li>
     {% endfor %}
   </ul>
 {% endblock %}

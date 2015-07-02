@@ -13,6 +13,7 @@
 
 @border: 1px solid #ddd;
 @border-bar: 5px solid #333;
+@border-radius: 4px;
 
 @banner-margin: 30px;
 @banner-padding: 30px 0;
@@ -40,6 +41,10 @@ h6 {
     margin-bottom: 0.6em;
 }
 
+h1 {
+    margin-top: 0;
+}
+
 code,
 kbd,
 pre,
@@ -48,26 +53,18 @@ samp {
     border: @border;
 }
 
-.a() {
-    a {
-        transition: color 0.2s ease-in-out;
-        &,
-        &:hover,
-        &:visited,
-        &:active {
-            color: @color-text;
-            text-decoration: none;
-        }
-        &:hover {
-            color: @color-link;
-        }
+a {
+    transition: color 0.2s ease-in-out;
+    &,
+    &:hover,
+    &:visited,
+    &:active {
+        color: @color-text;
+        text-decoration: none;
     }
-}
-
-.a();
-
-.pagination {
-    .a();
+    &:hover {
+        color: @color-link;
+    }
 }
 
 .content() {
@@ -159,7 +156,7 @@ footer {
         }
         pre,
         img {
-            border-radius: 4px;
+            border-radius: @border-radius;
         }
         p {
             .content();
@@ -200,6 +197,11 @@ footer {
     margin-top: 30px;
 }
 
+.pager li a {
+    transition: none;
+    border-radius: @border-radius;
+}
+
 .list-separated > li {
     padding: 0;
     margin-right: @list-separator-spacing;
@@ -212,14 +214,17 @@ footer {
     }
 }
 
-.index {
+.list-index {
+    @margin : 1em;
+    margin-left: @margin;
     li,
     dt {
-        margin-top: 1em;
+        margin-top: @margin;
         font-size: @list-font-size;
     }
     dd {
-        padding-top: 1em;
+        margin-top: @margin;
+        margin-left: @margin;
         font-size: @list-font-size;
     }
 }
