@@ -1,14 +1,10 @@
 <header>
   <div class="container">
-    <div class="header-inner">
-      <h1 class="header-name">
-        <a href="{{ SITEURL }}">{{ SITENAME }}</a>
-      </h1>
+    <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+    <h2>{{ SITE_SUBTEXT }}</h2>
 
-      <h3 class="header-text">{{ SITE_SUBTEXT }}</h3>
-
-      <ul class="header-menu list-inline list-separated">
-
+    <nav>
+      <ul class="list-inline list-separated">
         {% for title, link in LINKS %}
           <li><a href="{{ link }}" target="_blank">{{ title }}</a></li>
         {% endfor %}
@@ -32,11 +28,11 @@
         {% endif %}
 
         {% if FEED_ATOM or FEED_RSS %}
-        <li>
-          <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ATOM %}{{ FEED_ATOM }}{% else %}{{ FEED_RSS }}{% endif %}"></a>
-        </li>
+          <li>
+            <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ATOM %}{{ FEED_ATOM }}{% else %}{{ FEED_RSS }}{% endif %}"></a>
+          </li>
         {% endif %}
       </ul>
-    </div>
+    </nav>
   </div>
 </header>
