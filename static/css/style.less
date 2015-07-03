@@ -2,7 +2,6 @@
 
 @font: "Ubuntu";
 @font-medium: "Ubuntu Medium";
-@font-light: "Ubuntu Light";
 @font-mono: "Ubuntu Mono";
 
 @color-bg-light: #fafafa;
@@ -21,8 +20,6 @@
 @list-separator-spacing: 0.5em;
 
 @list-font-size: 120%;
-
-@content-size: 110%;
 
 
 body {
@@ -55,6 +52,7 @@ samp {
 
 a {
     transition: color 0.2s ease-in-out;
+
     &,
     &:hover,
     &:visited,
@@ -62,14 +60,10 @@ a {
         color: @color-text;
         text-decoration: none;
     }
+
     &:hover {
         color: @color-link;
     }
-}
-
-.content() {
-    font-size: @content-size;
-    line-height: @content-size + 20%;
 }
 
 header {
@@ -98,8 +92,8 @@ header {
     nav ul {
         font-size: 150%;
         margin-bottom: 0;
-        li {
 
+        li {
             &:first-child {
                 padding-left: 0;
             }
@@ -125,75 +119,71 @@ footer {
     }
 }
 
-.post {
+article {
     font-size: 135%;
+
+    .post-title {
+        margin-top: 0;
+    }
+
+    .post-details {
+        font-size: 80%;
+
+        .post-date a {
+            &:hover,
+            &:visited,
+            &:active {
+                color: lighten(@color-text, 40%);
+            }
+        }
+    }
+
     &.mini-post {
         border-bottom: @border;
         padding: 30px 0;
+
         &:last-child {
             border-bottom: none;
-        }
-
-        .post-title {
-            font-size: 150%;
-            line-height: 1.42857143; // Bootstrap rule
-            margin-bottom: 1em;
-            margin-top: 0;
-        }
-
-        .post-date a {
-            font-size: 120%;
         }
     }
 
     .post-content {
         margin-top: 20px;
+
         img {
             display: block;
             height: auto;
             max-width: 100%;
             width: 100% \9;
         }
+
         pre,
         img {
             border-radius: @border-radius;
         }
-        p {
-            .content();
-        }
+
         pre {
-            font-size: 100%;
+            font-size: 80%;
             padding: 0.5em;
         }
+
         p,
         pre {
             margin-bottom: 1em;
         }
+
         a {
             color: @color-link;
             &:hover {
                 border-bottom: 1px dotted;
             }
         }
-
-    }
-}
-
-.post-date {
-    a {
-        color: lighten(@color-text, 40%);
-    }
-}
-
-.page {
-    .content {
-        .content();
     }
 }
 
 .separator {
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .pager li a {
@@ -204,23 +194,38 @@ footer {
 .list-separated > li {
     padding: 0;
     margin-right: @list-separator-spacing;
+
     &::after {
-        content: "|";
         margin-left: @list-separator-spacing;
     }
+
     &:last-child::after {
         content: none;
     }
 }
 
+.list-separated-pipe > li::after {
+        content: "|";
+}
+
+.list-separated-dot >li::after {
+        content: "\b7";
+}
+
+.list-inline {
+    margin-left: 0;
+}
+
 .list-index {
     @margin : 1em;
     margin-left: @margin;
+
     li,
     dt {
         margin-top: @margin;
         font-size: @list-font-size;
     }
+
     dd {
         margin-top: @margin;
         margin-left: @margin;

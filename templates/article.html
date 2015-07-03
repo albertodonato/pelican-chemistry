@@ -16,41 +16,47 @@
 {% endblock %}
 
 {% block content %}
-  <div class="post full-post">
+  <article class="post-full">
     <h1 class="post-title">
       <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
     </h1>
-    <ul class="list-inline">
-      <li class="post-date">
-        <a class="text-muted" href="{{ SITEURL }}/{{ article.url }}" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</a>
-      </li>
-      <li class="muted">&middot;</li>
-      <li class="post-category">
-        <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-      </li>
-      {% if article.tags %}
-        <li class="muted">&middot;</li>
-        <li>
-          {% for tag in article.tags %}
-            <a href="{{ SITEUrL }}/tag/{{ tag }}.html">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-          {% endfor %}
+    <div class="post-details">
+      <ul class="list-inline list-separated list-separated-dot">
+        <li class="post-date">
+          <time>
+            <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.date.isoformat() }}">
+              {{ article.locale_date }}
+            </a>
+          </time>
         </li>
-      {% endif %}
-      {% if article.author and SHOW_ARTICLE_AUTHOR %}
-        <li class="muted">&middot;</li>
-        <li>
-          <address class="post-author">
-            By <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-          </address>
+        <li class="post-category">
+          <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
         </li>
-      {% endif %}
-    </ul>
+        {% if article.tags %}
+          <li class="post-tags">
+            {% for tag in article.tags|sort %}
+              <a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a>
+              {% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </li>
+        {% endif %}
+        {% if article.author and SHOW_ARTICLE_AUTHOR %}
+          <li>
+            <address>
+              By <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+            </address>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
     <div class="post-content">
       {{ article.content }}
     </div>
-  </div>
-  <hr class="separator">
-  <div class="col-md-8 col-md-offset-2">
-    {% include 'include/disqus_comments.html' %}
-  </div>
+  </article>
+  {% if DISQUS_SITENAME %}
+    <hr class="separator">
+    <div class="col-md-8 col-md-offset-2">
+      {% include 'include/disqus_comments.html' %}
+    </div>
+  {% endif %}
 {% endblock %}

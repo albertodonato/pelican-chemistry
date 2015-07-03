@@ -10,38 +10,40 @@
   {% block page_title %}
     <h1>All Articles</h1>
   {% endblock %}
-  <div>
-    {% for article in articles_page.object_list %}
-      <article class="post mini-post">
-        <div class="row">
-          <aside class="col-md-4">
-            <time class="post-date">
-              <a class="text-muted" href="{{ SITEURL }}/{{ article.url }}" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</a>
-            </time>
-            <p class="post-category">
-              <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-            </p>
-            {% if article.author and SHOW_ARTICLE_AUTHOR %}
-              <address class="post-author">
-                By <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-              </address>
-            {% endif %}
-          </aside>
-          <div class="col-md-8">
-            <h2 class="post-title">
-              <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-            </h2>
-            <div class="post-content">
-              {% if article.summary %}
-                {{ article.summary|striptags }}
-              {% else %}
-                {{ article.content|striptags|truncate(256) }}
-              {% endif %}
-            </div>
-          </div>
+
+  {% for article in articles_page.object_list %}
+    <article class="mini-post row">
+      <aside class="col-md-2 post-details">
+        <time class="post-date">
+          <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.date.isoformat() }}">
+            {{ article.locale_date }}
+          </a>
+        </time>
+        <p class="post-category">
+          <a href="{{ SITEURL }}/{{ article.category.url }}">
+            {{ article.category }}
+          </a>
+        </p>
+        {% if article.author and SHOW_ARTICLE_AUTHOR %}
+          <address class="post-author">
+            By <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+          </address>
+        {% endif %}
+      </aside>
+      <div class="col-md-10">
+        <h2 class="post-title">
+          <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+        </h2>
+        <div class="post-content">
+          {% if article.summary %}
+            {{ article.summary|striptags }}
+          {% else %}
+            {{ article.content|striptags|truncate(256) }}
+          {% endif %}
         </div>
-      </article>
-    {% endfor %}
-  </div>
+      </div>
+    </article>
+  {% endfor %}
+
   {% include 'include/pagination.html' %}
 {% endblock %}
