@@ -13,8 +13,8 @@
 @color-link: #c7254e;
 
 @border: 1px solid #ddd;
+@border-left: 4px solid #ddd;
 @border-bar: 5px solid #333;
-@border-radius: 4px;
 
 @banner-margin: 2em;
 @banner-padding: 2em 0;
@@ -185,14 +185,10 @@ article {
             width: 100% \9;
         }
 
-        pre,
-        img {
-            border-radius: @border-radius;
-        }
-
         pre {
             font-size: inherit;
             padding: 0.5em;
+            border-left: @border-left;
         }
 
         p,
@@ -220,7 +216,7 @@ article {
 
 .pager li a {
     transition: none;
-    border-radius: @border-radius;
+    border-radius: 4px;
 }
 
 .list-separated > li {
