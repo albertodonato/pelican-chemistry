@@ -12,36 +12,55 @@
   {% endblock %}
 
   {% for article in articles_page.object_list %}
-    <article class="mini-post row">
-      <aside class="col-md-2 post-details">
-        <time class="post-date">
-          <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.date.isoformat() }}">
-            {{ article.locale_date }}
-          </a>
-        </time>
-        <p class="post-category">
-          <a href="{{ SITEURL }}/{{ article.category.url }}">
-            {{ article.category }}
-          </a>
-        </p>
-        {% if article.author and SHOW_ARTICLE_AUTHOR %}
-          <address class="post-author">
-            By <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-          </address>
-        {% endif %}
-      </aside>
-      <div class="col-md-10">
-        <h2 class="post-title">
-          <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-        </h2>
-        <div class="post-content">
-          {% if article.summary %}
-            {{ article.summary|striptags }}
-          {% else %}
-            {{ article.content|striptags|truncate(256) }}
+    <article class="post-summary">
+      <h2 class="post-title">
+        <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+      </h1>
+      <div class="post-details">
+        <ul class="list-inline list-separated list-separated-dot">
+          <li class="post-date">
+            <time>
+              <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.date.isoformat() }}">
+                {{ article.locale_date }}
+              </a>
+            </time>
+          </li>
+          <li class="post-category">
+            <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+          </li>
+          {% if article.tags %}
+            <li class="post-tags">
+              {% for tag in article.tags|sort %}
+                <a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a>
+                {% if not loop.last %}, {% endif %}
+              {% endfor %}
+            </li>
           {% endif %}
-        </div>
+          {% if article.author and SHOW_ARTICLE_AUTHOR %}
+            <li>
+              <address>
+                By <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+              </address>
+            </li>
+          {% endif %}
+        </ul>
       </div>
+      <div class="post-content">
+        {% if article.summary %}
+          {{ article.summary|striptags }}
+        {% else %}
+          {{ article.content|striptags|truncate(256) }}
+        {% endif %}
+      </div>
+
+      <nav>
+        <div class="btn-group" role="group">
+          <a class="btn btn-default" href="{{ SITEURL }}/{{ article.url }}" title="Full article">
+            <span aria-hidden="true">&rarr;</span>
+            Read more
+          </a>
+        </div>
+      </nav>
     </article>
   {% endfor %}
 
