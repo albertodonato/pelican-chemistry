@@ -1,29 +1,31 @@
 <header>
   <div class="container">
     <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
-    <h2>{{ SITE_SUBTEXT }}</h2>
-
+    {% if TAGLINE %}
+      <h2>{{ TAGLINE }}</h2>
+    {% endif %}
+      
     <nav>
       <ul class="list-inline list-separated list-separated-pipe">
         {% for title, link in LINKS %}
           <li><a href="{{ link }}" target="_blank">{{ title }}</a></li>
         {% endfor %}
 
-        {% if PAGES_ON_MENU %}
+        {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in PAGES %}
             <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% endfor %}
         {% endif %}
 
-        {% if CATEGORIES_ON_MENU %}
+        {% if CATEGORIES_LINK_ON_MENU %}
           <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
         {% endif %}
 
-        {% if TAGS_ON_MENU %}
+        {% if TAGS_LINK_ON_MENU %}
           <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
         {% endif %}
 
-        {% if ARCHIVES_ON_MENU %}
+        {% if ARCHIVES_LINK_ON_MENU %}
           <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
         {% endif %}
 
