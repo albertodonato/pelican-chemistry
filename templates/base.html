@@ -9,25 +9,13 @@
       <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
       <link rel="canonical" href="{{ SITEURL }}/{{ output_file }}">
-
-      {% if FEED_ATOM %}
-        <link type="application/atom+xml" rel="alternate" href="{{ SITEURL }}/{{ FEED_ATOM }}"  title="{{ SITENAME }} Atom Feed">
-      {% endif %}
-      {% if FEED_RSS %}
-        <link type="application/rss+xml" rel="alternate" href="{{ SITEURL }}/{{ FEED_RSS }}" title="{{ SITENAME }} RSS Feed">
-      {% endif %}
-
-      <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu:300,400,500,500italic">
-      <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.min.css">
-      <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.min.css">
-
       {% if FAVICON_URL %}
         <link rel="icon" href="{{ FAVICON_URL }}">
       {% endif %}
-  
-      {% include "include/google_analytics.html" %}{% endblock %}
+      {% include "include/rss.html" %}
+      {% include "include/css.html" %}
+      {% include "include/google_analytics.html" %}
+    {% endblock %}
   </head>
   
   <body>
