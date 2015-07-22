@@ -32,7 +32,7 @@ Name                         Value
 ``TAGS_LINK_ON_MENU``        Whether to include a link to the tags page in the
                              menu.
 ``LOCAL_RESOURCES``          If set to ``True``, local resources are used
-                             instead of CDN ones for css.
+                             instead of CDN ones for CSS.
 ===========================  ==================================================
 
 
