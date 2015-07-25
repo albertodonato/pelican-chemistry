@@ -99,6 +99,8 @@ header {
     }
 
     nav {
+        text-align: center;
+
         ul {
             font-size: 18px;
             margin-bottom: 0;
@@ -117,12 +119,13 @@ header {
 }
 
 footer {
-    background-color: @color-bg-dark;
-    color: @color-footer-text;
     border-top: @border;
     border-bottom: @border-bar;
-    font-size: 12px;
     padding: @top-elements-padding;
+    text-align: center;
+    font-size: 12px;
+    background-color: @color-bg-dark;
+    color: @color-footer-text;
 
     .footer-links {
         font-size: 14px;
@@ -143,7 +146,7 @@ article {
 
     .post-details {
         font-size: @font-size * 4/5;
-
+b
         .post-date a {
             &:hover,
             &:visited,
@@ -265,5 +268,13 @@ article {
         margin-top: @margin;
         margin-left: @margin;
         font-size: @font-size;
+    }
+}
+
+@media (min-width: 960px) {
+    header {
+        nav {
+            text-align: left;
+        }
     }
 }
