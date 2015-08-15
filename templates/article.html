@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block content %}
-  <article>
+  <article class="{{ article.status }}">
     <h1 class="post-title">
       <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
     </h1>
