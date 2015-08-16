@@ -140,15 +140,15 @@ main {
 article {
     font-size: @font-size;
 
-    &.draft::before {
-        position: absolute;
-        content: "draft";
-        color: red;
-    }
-
     .post-title {
         margin-top: 0;
     }
+
+    &.draft .post-title::after {
+        color: @color-link;
+        content: "[DRAFT]";
+    }
+
 
     .post-details {
         font-size: @font-size * 4/5;
