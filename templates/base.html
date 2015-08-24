@@ -22,6 +22,7 @@
     {% include "include/header.html" %}
     <main>
       <div class="container">
+        {% block content_hint %}{% endblock %}
         {% block content %}{% endblock %}
       </div>
     </main>
