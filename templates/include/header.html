@@ -31,7 +31,7 @@
 
         {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
           <li>
-            <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
+            <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
           </li>
         {% endif %}
       </ul>
