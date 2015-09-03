@@ -169,7 +169,7 @@ article {
 
     &.post-summary {
         border-bottom: @border;
-        padding: 30px 0;
+        padding: 1em 0;
 
         &:first-child {
             padding-top: 0;
@@ -182,15 +182,15 @@ article {
         nav {
             margin-top: 1em;
 
-            .btn-group {
+            .nav-links {
+                font-size: 13px;
+                display: inline-block;
+                position: relative;
                 width: 100%;
-
-                .btn {
-                    font-weight: @font-weight-normal;
-                }
 
                 a {
                     float: right;
+                    margin-right: 1em;
                 }
             }
         }
@@ -285,6 +285,7 @@ article {
 }
 
 @media (min-width: 960px) {
+
     header {
 
         h1 {
@@ -319,6 +320,16 @@ article {
 
             pre {
                 font-size: @font-size * 4/5;
+            }
+        }
+
+        &.post-summary {
+
+            nav {
+
+                .nav-links {
+                    font-size: @font-size - 4px;
+                }
             }
         }
     }
