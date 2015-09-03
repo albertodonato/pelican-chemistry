@@ -47,7 +47,13 @@ h6,
 
 h1,
 .h1 {
+    font-size: 25px;
     margin-top: 0;
+}
+
+h2,
+.h2 {
+    font-size: 24px;
 }
 
 code,
@@ -85,24 +91,25 @@ header {
     padding: @top-elements-padding;
 
     h1 {
-        font-size: 52px;
+        font-size: 30px;
         margin-top: 0;
         margin-bottom: .3em;
     }
 
     h2 {
-        color: lighten(@color-text, 20%);
+        font-size: 20px;
         font-style: italic;
         margin-bottom: 1.2em;
         margin-top: 0;
         margin-left: 1em;
+        color: lighten(@color-text, 20%);
     }
 
     nav {
         text-align: center;
+        font-size: 15px;
 
         ul {
-            font-size: 18px;
             margin-bottom: 0;
 
             li {
@@ -128,7 +135,6 @@ footer {
     color: @color-footer-text;
 
     .footer-links {
-        font-size: 14px;
         font-weight: @font-weight-bold;
     }
 }
@@ -138,7 +144,6 @@ main {
 }
 
 article {
-    font-size: @font-size;
 
     .post-title {
         margin-top: 0;
@@ -151,7 +156,7 @@ article {
 
 
     .post-details {
-        font-size: @font-size * 4/5;
+        font-size: 13px;
 
         .post-date a {
             &:hover,
@@ -202,7 +207,6 @@ article {
         }
 
         pre {
-            font-size: @font-size * 4/5;
             padding: 0.5em;
             border-left: @border-left;
         }
@@ -226,7 +230,8 @@ article {
 }
 
 .content-hint {
-    font-size: 18px;
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
 .separator {
@@ -271,20 +276,69 @@ article {
     li,
     dt {
         margin-top: @margin;
-        font-size: @font-size;
     }
 
     dd {
         margin-top: @margin;
         margin-left: @margin;
-        font-size: @font-size;
     }
 }
 
 @media (min-width: 960px) {
     header {
+
+        h1 {
+            font-size: 52px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
         nav {
             text-align: left;
+            font-size: 18px;
+        }
+    }
+
+    footer {
+
+        .footer-links {
+            font-size: 14px;
+        }
+    }
+
+    article {
+        font-size: @font-size;
+
+        .post-details {
+            font-size: @font-size * 4/5;
+        }
+
+        .post-content {
+
+            pre {
+                font-size: @font-size * 4/5;
+            }
+        }
+    }
+
+    .content-hint {
+        font-size: 18px;
+        margin-bottom: 0.7em;
+    }
+
+    .h1,
+    h1 {
+        font-size: 36px;
+    }
+
+    .list-index {
+
+        li,
+        dt,
+        dd {
+            font-size: @font-size;
         }
     }
 }
