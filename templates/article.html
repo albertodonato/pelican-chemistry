@@ -53,8 +53,7 @@
       {{ article.content }}
     </div>
   </article>
-  {% if DISQUS_SITENAME %}
-    <hr class="separator">
-    {% include 'include/disqus_comments.html' %}
-  {% endif %}
+
+  {% include 'include/disqus_comments.html' %}
+  {% include 'include/googleplus_comments.html' %}
 {% endblock %}

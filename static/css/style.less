@@ -12,8 +12,9 @@
 @color-footer-text: #808080;
 @color-link: #c7254e;
 
-@border: 1px solid #ddd;
-@border-left: 4px solid #ddd;
+@border-color: #ddd;
+@border: 1px solid @border-color;
+@border-left: 4px solid @border-color;
 @border-bar: 5px solid #333;
 
 @top-elements-padding: 2em 0;
@@ -234,9 +235,10 @@ article {
     margin-bottom: 0;
 }
 
-.separator {
-    margin-bottom: 2em;
+.comments {
     margin-top: 2em;
+    padding-top: 2em;
+    border-top: @border;
 }
 
 .pager li a {
