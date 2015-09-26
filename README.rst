@@ -22,17 +22,21 @@ Name                         Value
 ``FAVICON_URL``              URL for the favicon (e.g.
                              ``FAVICON_URL = '/favicon.png'``). This is not
                              prepended with SITEURL.
-``GOOGLE_ANALYTICS``         The Google Analytics id for the site.
-``SHOW_ARTICLE_AUTHOR``      Whether to show articles author(s) in the index
-                             page.
 ``ARCHIVES_LINK_ON_MEU``     Whether to include a link to the archives page in
                              the menu.
 ``CATEGORIES_LINK_ON_MENU``  Whether to include a link to the categories page
                              in the menu.
 ``TAGS_LINK_ON_MENU``        Whether to include a link to the tags page in the
                              menu.
+``SHOW_ARTICLE_AUTHOR``      Whether to show articles author(s) in the index
+                             page.
 ``LOCAL_RESOURCES``          If set to ``True``, local resources are used
                              instead of CDN ones for CSS.
+``GOOGLE_ANALYTICS``         The Google Analytics id for the site.
+``DISQUS_SITENAME``          The Disqus site name to enable embedded comments
+                             embedding in posts.
+``GOOGLEPLUS_COMMENTS``      If set to ``True, enable Google+ comments section
+                             in posts.
 ===========================  ==================================================
 
 
