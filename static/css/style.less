@@ -230,12 +230,15 @@ article {
         pre {
             margin-bottom: 1em;
         }
+    }
+}
 
-        a {
-            color: @color-link;
-            &:hover {
-                border-bottom: 1px dotted;
-            }
+.post-content,
+.content {
+    a {
+        color: @color-link;
+        &:hover {
+            border-bottom: 1px dotted;
         }
     }
 }
@@ -322,6 +325,12 @@ article {
 
         .footer-links {
             font-size: 14px;
+        }
+    }
+
+    .page {
+        .content {
+            font-size: @font-size;
         }
     }
 
