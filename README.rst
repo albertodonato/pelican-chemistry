@@ -40,6 +40,13 @@ Name                         Value
 ===========================  ==================================================
 
 
+Supported plugins
+-----------------
+
+The theme supports styling header links from the `headerid
+<https://github.com/getpelican/pelican-plugins/tree/master/headerid>` plugin.
+
+
 Rebuild CSS
 -----------
 

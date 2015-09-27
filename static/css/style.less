@@ -200,6 +200,20 @@ article {
     .post-content {
         margin-top: 1.5em;
 
+        .headerlink {
+            margin-left: 0.1em;
+            opacity: 0;
+        }
+
+        h2:hover .headerlink {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                border-bottom: 0;
+            }
+        }
+
         img {
             display: block;
             height: auto;
