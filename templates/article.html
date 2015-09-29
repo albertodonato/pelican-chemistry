@@ -35,8 +35,7 @@
         {% if article.tags %}
           <li class="post-tags">
             {% for tag in article.tags|sort %}
-              <a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a>
-              {% if not loop.last %}, {% endif %}
+              <a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}
           </li>
         {% endif %}
