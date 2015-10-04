@@ -15,4 +15,6 @@
 
 <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.min.css">
 <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.min.css">
-
+{% if CUSTOM_CSS %}
+  <link rel="stylesheet" type="text/css" href="{{ CUSTOM_CSS }}">
+{% endif %}

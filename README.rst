@@ -22,6 +22,9 @@ Name                         Value
 ``FAVICON_URL``              URL for the favicon (e.g.
                              ``FAVICON_URL = '/favicon.png'``). This is not
                              prepended with SITEURL.
+``CUSTOM_CSS``               Absolute URL for an additional CSS file (e.g.
+                             ``CUSTOM_CSS = '/custom.css'``). This is not
+                             prepended with SITEURL.
 ``ARCHIVES_LINK_ON_MEU``     Whether to include a link to the archives page in
                              the menu.
 ``CATEGORIES_LINK_ON_MENU``  Whether to include a link to the categories page
