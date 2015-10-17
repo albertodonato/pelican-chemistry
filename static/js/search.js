@@ -9,11 +9,9 @@ $(document).ready(function() {
     });
     icon.click(function(e) {
         e.preventDefault();
-        icon.hide();
         input.show().focus();
     });
     input.blur(function() {
         input.hide();
-        icon.show();
     });
 });
