@@ -1,7 +1,7 @@
 {% if LOCAL_RESOURCES %}
-  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/bootstrap-3.3.5.min.css">
-  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome-4.3.0.min.css">
-  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap-3.3.5.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome-4.3.0.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/fonts.css">
 {% else %}
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -13,8 +13,8 @@
   <script type="application/javascript" src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.min.css">
-<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.min.css">
+<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygments.min.css">
+<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.min.css">
 {% if CUSTOM_CSS %}
   <link rel="stylesheet" type="text/css" href="{{ CUSTOM_CSS }}">
 {% endif %}

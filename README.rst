@@ -24,7 +24,7 @@ Name                         Value
                              prepended with SITEURL.
 ``CUSTOM_CSS``               Absolute URL for an additional CSS file (e.g.
                              ``CUSTOM_CSS = '/custom.css'``). This is not
-                             prepended with SITEURL.
+                             prepended with ``SITEURL``.
 ``ARCHIVES_LINK_ON_MEU``     Whether to include a link to the archives page in
                              the menu.
 ``CATEGORIES_LINK_ON_MENU``  Whether to include a link to the categories page
@@ -46,8 +46,21 @@ Name                         Value
 Supported plugins
 -----------------
 
+1. headerid
+~~~~~~~~~~~
+
 The theme supports styling header links from the `headerid
-<https://github.com/getpelican/pelican-plugins/tree/master/headerid>` plugin.
+<https://github.com/getpelican/pelican-plugins/tree/master/headerid>`_
+plugin. Anchors for permalinks to paragraphs are shown on hover on titles.
+
+2. tipue_search
+~~~~~~~~~~~~~~~
+
+If the `tipue_search
+<https://github.com/getpelican/pelican-plugins/tree/master/tipue_search>`_
+plugin is enabled, a search box is shown in pages and search is available. Note
+that you need to add `search` to `DIRECT_TEMPLATES` for the result page to
+work.
 
 
 Rebuild CSS
