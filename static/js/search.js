@@ -7,11 +7,19 @@ $(document).ready(function() {
             input.blur();
         }
     });
-    icon.click(function(e) {
-        e.preventDefault();
-        input.show().focus();
-    });
     input.blur(function() {
         input.hide();
     });
+    icon.click(function(e) {
+        e.preventDefault();
+        input.toggle();
+        if (input.is(':visible')) {
+            input.focus();
+        }
+    });
+
+    // Show by default if search critera is present
+    if (input.val() !== '') {
+        input.show();
+    }
 });
