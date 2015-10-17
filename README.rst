@@ -46,21 +46,22 @@ Name                         Value
 Supported plugins
 -----------------
 
-1. headerid
-~~~~~~~~~~~
+headerid
+~~~~~~~~
 
 The theme supports styling header links from the `headerid
 <https://github.com/getpelican/pelican-plugins/tree/master/headerid>`_
 plugin. Anchors for permalinks to paragraphs are shown on hover on titles.
 
-2. tipue_search
-~~~~~~~~~~~~~~~
+tipue_search
+~~~~~~~~~~~~
 
 If the `tipue_search
 <https://github.com/getpelican/pelican-plugins/tree/master/tipue_search>`_
-plugin is enabled, a search box is shown in pages and search is available. Note
-that you need to add `search` to `DIRECT_TEMPLATES` for the result page to
-work.
+plugin is enabled, a search box is shown in pages and search is available.
+
+Note that you need to add `"search"` to `DIRECT_TEMPLATES` for the search
+results page to work.
 
 
 Rebuild CSS
