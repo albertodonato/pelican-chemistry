@@ -3,12 +3,6 @@
 {% block head %}
   {{ super() }}
 
-  {% if LOCAL_RESOURCES %}
-    <script type="application/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-2.1.4.min.js"></script>
-  {% else %}
-    <script type="application/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  {% endif %}
-
   <script type="application/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch_content.js"></script>
   <script type="application/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch_set.js"></script>
   <script type="application/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.js"></script>
@@ -22,7 +16,6 @@
     });
   </script>
 {% endblock %}
-
 
 {% block title %}
   {{ SITENAME }} &mdash; Search results
