@@ -5,7 +5,7 @@
       <h2>{{ TAGLINE }}</h2>
     {% endif %}
       
-    <nav>
+    <nav class="hidden-print">
       <ul class="list-inline list-separated list-separated-pipe">
         {% for title, link in LINKS %}
           <li><a href="{{ link }}">{{ title }}</a></li>

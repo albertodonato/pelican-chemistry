@@ -1,15 +1,15 @@
 STATICDIR = static
 
 CSSDIR = $(STATICDIR)/css
-STYLE_CSS = $(CSSDIR)/style.min.css
+CSS = $(CSSDIR)/style.min.css $(CSSDIR)/print.min.css
 PYGMENTS_CSS = $(CSSDIR)/pygments.min.css
 PYGMENTS_STYLE ?= default
 
-LESSC = lessc -x
+LESSC = lessc
 
 all: css
 
-css: $(PYGMENTS_CSS) $(STYLE_CSS)
+css: $(CSS) $(PYGMENTS_CSS)
 
 pygments:
 	pygmentize -S $(PYGMENTS_STYLE) -f html | $(LESSC) - > $(PYGMENTS_CSS)
