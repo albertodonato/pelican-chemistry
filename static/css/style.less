@@ -15,11 +15,9 @@
 @border-color: #ddd;
 @border: 1px solid @border-color;
 @border-left: 4px solid @border-color;
-@border-bar: 5px solid #333;
 
-@top-elements-padding: 2em 0;
-
-@list-separator-spacing: 0.5em;
+@top-elements-spacing: 2em 0;
+@list-separator-spacing: .5em;
 
 
 body {
@@ -42,7 +40,7 @@ h6,
 .h5,
 .h6 {
     margin-top: 1em;
-    margin-bottom: 0.7em;
+    margin-bottom: .7em;
     font-weight: @font-weight-normal;
 }
 
@@ -71,7 +69,7 @@ tt {
 }
 
 a {
-    transition: color 0.2s ease-in-out;
+    transition: color .2s ease-in-out;
 
     &,
     &:hover,
@@ -88,29 +86,15 @@ a {
 }
 
 header {
-    background-color: @color-bg-dark;
-    border-bottom: @border;
-    border-top: @border-bar;
-    padding: @top-elements-padding;
-
-    h1 {
-        font-size: 30px;
-        margin-top: 0;
-        margin-bottom: .3em;
-    }
-
-    h2 {
-        font-size: 20px;
-        font-style: italic;
-        margin-top: 0;
-        margin-left: 1em;
-        margin-bottom: 0;
-        color: lighten(@color-text, 20%);
-    }
-
     nav {
-        margin-top: 2em;
-        text-align: center;
+
+        &.navbar {
+            border-bottom: @border;
+        }
+
+        margin: 0;
+        padding: 12px 0;
+        background-color: @color-bg-dark;
         font-size: 15px;
 
         ul {
@@ -127,12 +111,31 @@ header {
             }
         }
     }
+
+    .title-area {
+        margin-top: 51px;
+        
+        .title {
+            margin-top: 20px;
+
+            h1 {
+                margin-bottom: .3em;
+                font-size: 28px;
+            }
+
+            h2 {
+                margin: 0 0 0 1em;
+                font-size: 20px;
+                font-style: italic;
+                color: lighten(@color-text, 20%);
+            }
+        }
+    }
 }
 
 footer {
     border-top: @border;
-    border-bottom: @border-bar;
-    padding: @top-elements-padding;
+    padding: @top-elements-spacing;
     text-align: center;
     font-size: 12px;
     background-color: @color-bg-dark;
@@ -144,7 +147,7 @@ footer {
 }
 
 main {
-    padding: @top-elements-padding;
+    margin: @top-elements-spacing;
 }
 
 article {
@@ -203,13 +206,13 @@ article {
         margin: 1.5em 0;
 
         .headerlink {
-            margin-left: 0.1em;
+            margin-left: .1em;
             opacity: 0;
         }
 
         h2:hover .headerlink {
             opacity: 1;
-            transition: opacity 0.2s ease-in-out;
+            transition: opacity .2s ease-in-out;
 
             &:hover {
                 border-bottom: 0;
@@ -224,7 +227,7 @@ article {
         }
 
         pre {
-            padding: 0.5em;
+            padding: .5em;
             border-left: @border-left;
         }
 
@@ -307,7 +310,7 @@ article {
 }
 
 .tipue_search_content_title {
-    margin-top: 0.5em;
+    margin-top: .5em;
 }
 
 .tipue_search_content_url {
@@ -324,14 +327,14 @@ article {
 }
 
 #tipue_search_warning {
-    margin: 0.3em 0;
+    margin: .3em 0;
 }
 
 #tipue_search_input {
     width: 10em;
     height: 25px;
     border: none;
-    margin-right: 0.5em;
+    margin-right: .5em;
     background: transparent;
     color: lighten(@color-text, 20%);
 
@@ -345,17 +348,25 @@ article {
 
     header {
 
-        h1 {
-            font-size: 52px;
-        }
+        .title-area {
 
-        h2 {
-            font-size: 30px;
-        }
+            .title {
 
-        nav {
-            text-align: left;
-            font-size: 18px;
+                h1 {
+                    display: inline-block;
+                    font-size: 52px;
+                }
+
+                h2 {
+                    display: inline-block;
+                    margin-left: .5em;
+                    font-size: 24px;
+                }
+            }
+
+            nav {
+                font-size: 18px;
+            }
         }
     }
 
@@ -400,11 +411,11 @@ article {
     .content-hint,
     #tipue_search_results_count {
         font-size: 18px;
-        margin-bottom: 0.7em;
+        margin-bottom: .7em;
     }
 
-    .h1,
     h1,
+    .h1,
     .tipue_search_content_title {
         font-size: 36px;
     }

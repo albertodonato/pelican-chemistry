@@ -17,7 +17,7 @@ h6,
 .h5,
 .h6 {
   margin-top: 1em;
-  margin-bottom: 0.7em;
+  margin-bottom: .7em;
   font-weight: 300;
 }
 h1,
@@ -54,29 +54,14 @@ a:focus {
 a:hover {
   color: #c7254e;
 }
-header {
-  background-color: #efefef;
-  border-bottom: 1px solid #ddd;
-  border-top: 5px solid #333;
-  padding: 2em 0;
-}
-header h1 {
-  font-size: 30px;
-  margin-top: 0;
-  margin-bottom: .3em;
-}
-header h2 {
-  font-size: 20px;
-  font-style: italic;
-  margin-top: 0;
-  margin-left: 1em;
-  margin-bottom: 0;
-  color: #666666;
-}
 header nav {
-  margin-top: 2em;
-  text-align: center;
+  margin: 0;
+  padding: 12px 0;
+  background-color: #efefef;
   font-size: 15px;
+}
+header nav.navbar {
+  border-bottom: 1px solid #ddd;
 }
 header nav ul {
   margin-bottom: 0;
@@ -87,9 +72,24 @@ header nav ul li:first-child {
 header nav ul li:last-child {
   padding-right: 0;
 }
+header .title-area {
+  margin-top: 51px;
+}
+header .title-area .title {
+  margin-top: 20px;
+}
+header .title-area .title h1 {
+  margin-bottom: .3em;
+  font-size: 28px;
+}
+header .title-area .title h2 {
+  margin: 0 0 0 1em;
+  font-size: 20px;
+  font-style: italic;
+  color: #666666;
+}
 footer {
   border-top: 1px solid #ddd;
-  border-bottom: 5px solid #333;
   padding: 2em 0;
   text-align: center;
   font-size: 12px;
@@ -100,7 +100,7 @@ footer .footer-links {
   font-weight: 500;
 }
 main {
-  padding: 2em 0;
+  margin: 2em 0;
 }
 article .post-title {
   margin-top: 0;
@@ -141,7 +141,7 @@ article .post-content {
   margin: 1.5em 0;
 }
 article .post-content .headerlink {
-  margin-left: 0.1em;
+  margin-left: .1em;
   opacity: 0;
 }
 article .post-content h2:hover .headerlink {
@@ -158,7 +158,7 @@ article .post-content img {
   width: 100% \9;
 }
 article .post-content pre {
-  padding: 0.5em;
+  padding: .5em;
   border-left: 4px solid #ddd;
 }
 article .post-content p,
@@ -221,7 +221,7 @@ article .post-content pre {
   margin-left: 1em;
 }
 .tipue_search_content_title {
-  margin-top: 0.5em;
+  margin-top: .5em;
 }
 .tipue_search_content_url {
   margin-left: 1em;
@@ -234,13 +234,13 @@ article .post-content pre {
   padding: 1em 0;
 }
 #tipue_search_warning {
-  margin: 0.3em 0;
+  margin: .3em 0;
 }
 #tipue_search_input {
   width: 10em;
   height: 25px;
   border: none;
-  margin-right: 0.5em;
+  margin-right: .5em;
   background: transparent;
   color: #666666;
 }
@@ -248,14 +248,16 @@ article .post-content pre {
   outline: none;
 }
 @media (min-width: 960px) {
-  header h1 {
+  header .title-area .title h1 {
+    display: inline-block;
     font-size: 52px;
   }
-  header h2 {
-    font-size: 30px;
+  header .title-area .title h2 {
+    display: inline-block;
+    margin-left: .5em;
+    font-size: 24px;
   }
-  header nav {
-    text-align: left;
+  header .title-area nav {
     font-size: 18px;
   }
   footer .footer-links {
@@ -279,10 +281,10 @@ article .post-content pre {
   .content-hint,
   #tipue_search_results_count {
     font-size: 18px;
-    margin-bottom: 0.7em;
+    margin-bottom: .7em;
   }
-  .h1,
   h1,
+  .h1,
   .tipue_search_content_title {
     font-size: 36px;
   }
