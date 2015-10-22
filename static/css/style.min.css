@@ -305,3 +305,11 @@ article .post-content pre {
     font-size: 20px;
   }
 }
+@media print {
+  a[href]::after {
+    content: none;
+  }
+  .post-content a[href]::after {
+    content: " [" attr(href) "] ";
+  }
+}
