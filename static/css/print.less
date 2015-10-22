@@ -2,6 +2,9 @@
     
     a[href]::after {
         content: none;
-    }
 
+        .post-content & {
+            content: " [" attr(href) "] ";
+        }
+    }
 }
