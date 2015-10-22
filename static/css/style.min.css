@@ -84,7 +84,7 @@ header .title-area .title h1 {
   font-size: 28px;
 }
 header .title-area .title h1 a {
-  color: #fff;
+  color: #fafafa;
 }
 header .title-area .title h2 {
   margin: 0 0 0 1em;
@@ -306,6 +306,9 @@ article .post-content pre {
   }
 }
 @media print {
+  header .title-area .title h1 a {
+    color: #333;
+  }
   a[href]::after {
     content: none;
   }

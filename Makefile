@@ -2,6 +2,7 @@ STATICDIR = static
 
 CSSDIR = $(STATICDIR)/css
 CSS = $(CSSDIR)/style.min.css
+LESSCSS = $(CSSDIR)/variables.less $(CSSDIR)/style.less $(CSSDIR)/print.less
 PYGMENTS_CSS = $(CSSDIR)/pygments.min.css
 PYGMENTS_STYLE ?= default
 
@@ -17,8 +18,7 @@ pygments:
 $(PYGMENTS_CSS):
 	pygmentize -S $(PYGMENTS_STYLE) -f html | $(LESSC) - > $@
 
-%.min.css: %.css
-%.min.css: %.less
+$(CSS): $(LESSCSS)
 	$(LESSC) $< $@
 
 .PHONY: pygments

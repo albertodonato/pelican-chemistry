@@ -1,27 +1,7 @@
-// -*- mode: less-css -*-
-
-@font: "Ubuntu";
-@font-mono: "Ubuntu Mono";
-@font-weight-normal: 300;
-@font-weight-bold: 500;
-@font-size: 20px;
-
-@color-bg-light: #fafafa;
-@color-bg-dark: #efefef;
-@color-text: #333;
-@color-footer-text: #808080;
-@color-link: #c7254e;
-
-@border-color: #ddd;
-@border: 1px solid @border-color;
-@border-left: 4px solid @border-color;
-
-@top-elements-spacing: 2em 0;
-@list-separator-spacing: .5em;
-
+@import "variables";
 
 body {
-    background-color: @color-bg-light;
+    background-color: @color-light;
     color: @color-text;
     font-family: @font;
     font-weight: @font-weight-normal;
@@ -95,7 +75,7 @@ header {
 
         margin: 0;
         padding: 12px 0;
-        background-color: @color-bg-dark;
+        background-color: @color-dark;
         font-size: 15px;
 
         ul {
@@ -125,7 +105,7 @@ header {
                 font-size: 28px;
 
                 a {
-                    color: #fff;
+                    color: @color-light;
                 }
             }
 
@@ -144,7 +124,7 @@ footer {
     padding: @top-elements-spacing;
     text-align: center;
     font-size: 12px;
-    background-color: @color-bg-dark;
+    background-color: @color-dark;
     color: @color-footer-text;
 
     .footer-links {
