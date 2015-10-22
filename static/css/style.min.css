@@ -73,20 +73,24 @@ header nav ul li:last-child {
   padding-right: 0;
 }
 header .title-area {
+  background-color: #333;
   margin-top: 51px;
 }
 header .title-area .title {
-  margin: 40px 0 30px;
+  margin: 40px 0;
 }
 header .title-area .title h1 {
-  margin-bottom: .3em;
+  margin: 0;
   font-size: 28px;
+}
+header .title-area .title h1 a {
+  color: #fff;
 }
 header .title-area .title h2 {
   margin: 0 0 0 1em;
   font-size: 20px;
   font-style: italic;
-  color: #666666;
+  color: #bbb;
 }
 footer {
   border-top: 1px solid #ddd;

@@ -86,6 +86,7 @@ a {
 }
 
 header {
+
     nav {
 
         &.navbar {
@@ -113,21 +114,26 @@ header {
     }
 
     .title-area {
+        background-color: @color-text;
         margin-top: 51px;
         
         .title {
-            margin: 40px 0 30px;
+            margin: 40px 0;
 
             h1 {
-                margin-bottom: .3em;
+                margin: 0;
                 font-size: 28px;
+
+                a {
+                    color: #fff;
+                }
             }
 
             h2 {
                 margin: 0 0 0 1em;
                 font-size: 20px;
                 font-style: italic;
-                color: lighten(@color-text, 20%);
+                color: #bbb;
             }
         }
     }
