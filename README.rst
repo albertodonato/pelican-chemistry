@@ -59,7 +59,7 @@ If the `tipue_search
 <https://github.com/getpelican/pelican-plugins/tree/master/tipue_search>`_
 plugin is enabled, a search box is shown in pages and search is available.
 
-Note that you need to add ``"search"``` to ``DIRECT_TEMPLATES`` for the search
+Note that you need to add ``"search"`` to ``DIRECT_TEMPLATES`` for the search
 results page to work.
 
 
