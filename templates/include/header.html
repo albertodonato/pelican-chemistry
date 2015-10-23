@@ -11,16 +11,18 @@
       </div>
 
       <div id="navbar-menu" class="collapse navbar-collapse">
+        {% if LINKS %}
         <ul class="nav navbar-nav">
           {% for title, link in LINKS %}
           <li><a href="{{ link }}">{{ title }}</a></li>
           {% endfor %}
         </ul>
+        {% endif %}
 
         {% if DISPLAY_PAGES_ON_MENU %}
         <ul class="nav navbar-nav">
-          {% for p in PAGES %}
-          <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          {% for page in PAGES %}
+          <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
           {% endfor %}
         </ul>
         {% endif %}
@@ -48,9 +50,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             <form action="{{ SITEURL }}/search.html">
-              <input type="text" id="tipue_search_input" name="q" autocomplete="off"
-                     placeholder="Search" required>
-              <a id="search-icon" class="fa fa-search" href="#"></a>
+              <input type="text" id="tipue_search_input"
+                     name="q" autocomplete="off" placeholder="Search" required>
             </form>
           </li>
         </ul>
