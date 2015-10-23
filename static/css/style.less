@@ -76,20 +76,30 @@ header {
         margin: 0;
         padding: 12px 0;
         background-color: @color-dark;
-        font-size: 15px;
+        font-size: 17px;
 
         ul {
             margin-bottom: 0;
 
             li {
+                margin: 0 5px;
+
                 &:first-child {
+                    margin-left: 0;
                     padding-left: 0;
                 }
 
                 &:last-child {
+                    margin-right: 0;
                     padding-right: 0;
                 }
             }
+        }
+
+        .navbar-toggle {
+            border: @border;
+            width: 42px;
+            height: 42px;
         }
     }
 
@@ -268,10 +278,6 @@ article {
     }
 }
 
-.list-separated-pipe > li::after {
-    content: "|";
-}
-
 .list-separated-dot > li::after {
     content: "\b7";
 }
@@ -321,7 +327,7 @@ article {
     height: 25px;
     border: none;
     margin-right: .5em;
-    background: transparent;
+    background-color: @color-light;
     color: lighten(@color-text, 20%);
 
     &:focus {
