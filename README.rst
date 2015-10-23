@@ -2,8 +2,7 @@
 pelican-chemistry
 =================
 
-A `Pelican <http://blog.getpelican.com/>`_ theme originally based on
-`pelican-alchemy <https://github.com/nairobilug/pelican-alchemy>`_.
+A minimalistic responsive `Pelican <http://blog.getpelican.com/>`_ theme.
 
 
 Theme-specific settings
@@ -25,13 +24,13 @@ Name                         Value
 ``CUSTOM_CSS``               Absolute URL for an additional CSS file (e.g.
                              ``CUSTOM_CSS = '/custom.css'``). This is not
                              prepended with ``SITEURL``.
-``ARCHIVES_LINK_ON_MEU``     Whether to include a link to the archives page in
+``ARCHIVES_LINK_ON_MENU``    Whether to include a link to the archives page in
                              the menu.
 ``CATEGORIES_LINK_ON_MENU``  Whether to include a link to the categories page
                              in the menu.
 ``TAGS_LINK_ON_MENU``        Whether to include a link to the tags page in the
                              menu.
-``SHOW_ARTICLE_AUTHOR``      Whether to show articles author(s) in the index
+``SHOW_ARTICLE_AUTHOR``      Whether to show articles author(s) on the index
                              page.
 ``LOCAL_RESOURCES``          If set to ``True``, local resources are used
                              instead of CDN ones for CSS.
@@ -60,7 +59,7 @@ If the `tipue_search
 <https://github.com/getpelican/pelican-plugins/tree/master/tipue_search>`_
 plugin is enabled, a search box is shown in pages and search is available.
 
-Note that you need to add `"search"` to `DIRECT_TEMPLATES` for the search
+Note that you need to add ``"search"``` to ``DIRECT_TEMPLATES`` for the search
 results page to work.
 
 
