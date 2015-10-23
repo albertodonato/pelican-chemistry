@@ -1,45 +1,61 @@
 <header>
   <nav class="navbar navbar-fixed-top hidden-print">
     <div class="container">
-      <ul class="list-inline list-separated list-separated-pipe">
-        {% for title, link in LINKS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar-menu"
+                aria-expanded="false">
+          <span class="fa fa-bars navbar-toggle-content"></span>
+        </button>
+      </div>
+
+      <div id="navbar-menu" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          {% for title, link in LINKS %}
+          <li><a href="{{ link }}">{{ title }}</a></li>
+          {% endfor %}
+        </ul>
 
         {% if DISPLAY_PAGES_ON_MENU %}
-        {% for p in PAGES %}
-        <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}
+        <ul class="nav navbar-nav">
+          {% for p in PAGES %}
+          <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
         {% endif %}
 
-        {% if CATEGORIES_LINK_ON_MENU %}
-        <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
-        {% endif %}
+        <ul class="nav navbar-nav">
+          {% if CATEGORIES_LINK_ON_MENU %}
+          <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
+          {% endif %}
 
-        {% if TAGS_LINK_ON_MENU %}
-        <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
-        {% endif %}
+          {% if TAGS_LINK_ON_MENU %}
+          <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
+          {% endif %}
 
-        {% if ARCHIVES_LINK_ON_MENU %}
-        <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
-        {% endif %}
+          {% if ARCHIVES_LINK_ON_MENU %}
+          <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+          {% endif %}
 
-        {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
-        <li>
-          <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
-        </li>
-        {% endif %}
-
+          {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
+          <li>
+            <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
+          </li>
+          {% endif %}
+        </ul>
         {% if 'tipue_search' in PLUGINS %}
-        <li>
-          <form action="{{ SITEURL }}/search.html">
-            <input type="text" id="tipue_search_input" name="q" autocomplete="off"
-                   placeholder="Search" required hidden>
-            <a id="search-icon" class="fa fa-search" href="#"></a>
-          </form>
-        </li>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form action="{{ SITEURL }}/search.html">
+              <input type="text" id="tipue_search_input" name="q" autocomplete="off"
+                     placeholder="Search" required>
+              <a id="search-icon" class="fa fa-search" href="#"></a>
+            </form>
+          </li>
+        </ul>
         {% endif %}
-      </ul>
+      </div>
     </div>
   </nav>
 

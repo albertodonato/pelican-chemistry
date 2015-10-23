@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  {{ SITENAME }} &mdash; Authors
+{{ SITENAME }} &mdash; Authors
 {% endblock %}
 
 {% block content %}
-  <h1>Authors</h1>
+<h1>Authors</h1>
 
-  <ul class="list-unstyled list-index">
-    {% for author, articles in authors|sort %}
-      <li>
-        <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-        <span class="badge">{{ articles|count }}</span>
-      </li>
-    {% endfor %}
-  </ul>
+<ul class="list-unstyled list-index">
+  {% for author, articles in authors|sort %}
+  <li>
+    <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+    <span class="badge">{{ articles|count }}</span>
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}
