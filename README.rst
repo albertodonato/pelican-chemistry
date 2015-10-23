@@ -72,6 +72,9 @@ you can rebuild the minified theme file with::
 
   $ make css
 
+Rebuilding CSS requires ``less`` and ``less-plugin-clean-css`` (they can be
+installed via ``npm``).
+  
 Syntax highlight is done through `pygments <http://pygments.org/>`_. The
 default theme can be changed regenerating the pygments CSS file::
 
