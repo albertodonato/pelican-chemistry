@@ -70,12 +70,23 @@ header {
     nav {
 
         &.navbar {
+            min-height: @navbar-menu-height;
+            margin: 0;
             border-bottom: @border;
 
+            .navbar-nav {
+
+                li {
+                    a {
+                        padding: 10px;
+                    }
+                }
+            }
+
             input[type='text'] {
-                margin: 4px 0 4px 15px;
+                margin: 2px 0 2px 10px;
                 border: @border;
-                padding: 10px 10px;
+                padding: 7px 0 7px 10px;
                 line-height: 20px;
                 background-color: @color-light;
 
@@ -98,7 +109,7 @@ header {
 
     .title-area {
         background-color: @color-text;
-        margin-top: 51px;
+        margin-top: @navbar-menu-height;
         
         .title {
             margin: 40px 0;
@@ -301,6 +312,13 @@ article {
 
         &:last-child {
             border: none;
+        }
+
+        li {
+            a {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
         }
     }
 }
