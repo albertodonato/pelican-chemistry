@@ -1,4 +1,13 @@
+@import "variables";
+
 @media print {
+
+    header {
+
+        .title-area .title h1 a {
+            color: @color-text;
+        }
+    }
     
     a[href]::after {
         content: none;

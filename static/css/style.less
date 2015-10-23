@@ -1,28 +1,7 @@
-// -*- mode: less-css -*-
-
-@font: "Ubuntu";
-@font-mono: "Ubuntu Mono";
-@font-weight-normal: 300;
-@font-weight-bold: 500;
-@font-size: 20px;
-
-@color-bg-light: #fafafa;
-@color-bg-dark: #efefef;
-@color-text: #333;
-@color-footer-text: #808080;
-@color-link: #c7254e;
-
-@border-color: #ddd;
-@border: 1px solid @border-color;
-@border-left: 4px solid @border-color;
-
-@top-elements-padding: 2em 0;
-
-@list-separator-spacing: 0.5em;
-
+@import "variables";
 
 body {
-    background-color: @color-bg-light;
+    background-color: @color-light;
     color: @color-text;
     font-family: @font;
     font-weight: @font-weight-normal;
@@ -41,7 +20,7 @@ h6,
 .h5,
 .h6 {
     margin-top: 1em;
-    margin-bottom: 0.7em;
+    margin-bottom: .7em;
     font-weight: @font-weight-normal;
 }
 
@@ -70,7 +49,7 @@ tt {
 }
 
 a {
-    transition: color 0.2s ease-in-out;
+    transition: color .2s ease-in-out;
 
     &,
     &:hover,
@@ -87,41 +66,69 @@ a {
 }
 
 header {
-    background-color: @color-bg-dark;
-    border-bottom: @border;
-    padding: @top-elements-padding;
-
-    h1 {
-        font-size: 30px;
-        margin-top: 0;
-        margin-bottom: .3em;
-    }
-
-    h2 {
-        font-size: 20px;
-        font-style: italic;
-        margin-top: 0;
-        margin-left: 1em;
-        margin-bottom: 0;
-        color: lighten(@color-text, 20%);
-    }
 
     nav {
-        margin-top: 2em;
-        text-align: center;
-        font-size: 15px;
 
-        ul {
-            margin-bottom: 0;
+        &.navbar {
+            min-height: @navbar-menu-height;
+            margin: 0;
+            border-bottom: @border;
 
-            li {
-                &:first-child {
-                    padding-left: 0;
+            .navbar-nav {
+
+                li {
+                    a {
+                        padding: 10px;
+                    }
                 }
+            }
 
-                &:last-child {
-                    padding-right: 0;
+            input[type='text'] {
+                margin: 2px 0 2px 10px;
+                border: none;
+                border-bottom: 1px solid @color-text;
+                padding: 7px 10px;
+                line-height: 20px;
+                background-color: transparent;
+
+                &:focus {
+                    outline: none;
                 }
+            }
+        }
+
+        background-color: @color-dark;
+        font-size: 17px;
+
+        .navbar-toggle {
+            border: @border;
+            width: 42px;
+            height: 42px;
+        }
+
+    }
+
+    .title-area {
+        background-color: @color-text;
+        margin-top: @navbar-menu-height;
+        
+        .title {
+            margin: 40px 0;
+
+            h1 {
+                margin: 0;
+                font-size: 28px;
+
+                a {
+                    color: @color-light;
+                }
+            }
+
+            h2 {
+                margin: 0 0 0 1em;
+                font-size: 20px;
+                font-style: italic;
+                color: #bbb;
             }
         }
     }
@@ -129,10 +136,10 @@ header {
 
 footer {
     border-top: @border;
-    padding: @top-elements-padding;
+    padding: @top-elements-spacing;
     text-align: center;
     font-size: 12px;
-    background-color: @color-bg-dark;
+    background-color: @color-dark;
     color: @color-footer-text;
 
     .footer-links {
@@ -141,7 +148,7 @@ footer {
 }
 
 main {
-    padding: @top-elements-padding;
+    margin: @top-elements-spacing;
 }
 
 article {
@@ -200,13 +207,13 @@ article {
         margin: 1.5em 0;
 
         .headerlink {
-            margin-left: 0.1em;
+            margin-left: .1em;
             opacity: 0;
         }
 
         h2:hover .headerlink {
             opacity: 1;
-            transition: opacity 0.2s ease-in-out;
+            transition: opacity .2s ease-in-out;
 
             &:hover {
                 border-bottom: 0;
@@ -221,7 +228,7 @@ article {
         }
 
         pre {
-            padding: 0.5em;
+            padding: .5em;
             border-left: @border-left;
         }
 
@@ -276,10 +283,6 @@ article {
     }
 }
 
-.list-separated-pipe > li::after {
-    content: "|";
-}
-
 .list-separated-dot > li::after {
     content: "\b7";
 }
@@ -303,8 +306,26 @@ article {
     }
 }
 
+#navbar-menu {
+
+    .navbar-nav {
+        border-bottom: @border;
+
+        &:last-child {
+            border: none;
+        }
+
+        li {
+            a {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
 .tipue_search_content_title {
-    margin-top: 0.5em;
+    margin-top: .5em;
 }
 
 .tipue_search_content_url {
@@ -321,38 +342,37 @@ article {
 }
 
 #tipue_search_warning {
-    margin: 0.3em 0;
+    margin: .3em 0;
 }
 
 #tipue_search_input {
     width: 10em;
-    height: 25px;
-    border: none;
-    margin-right: 0.5em;
-    background: transparent;
-    color: lighten(@color-text, 20%);
-
-    &:focus {
-        outline: none;
-    }
 }
 
 
-@media (min-width: 960px) {
+@media (min-width: 768px) {
 
     header {
 
-        h1 {
-            font-size: 52px;
-        }
+        .title-area {
 
-        h2 {
-            font-size: 30px;
-        }
+            .title {
 
-        nav {
-            text-align: left;
-            font-size: 18px;
+                h1 {
+                    display: inline-block;
+                    font-size: 52px;
+                }
+
+                h2 {
+                    display: inline-block;
+                    margin-left: .5em;
+                    font-size: 24px;
+                }
+            }
+
+            nav {
+                font-size: 18px;
+            }
         }
     }
 
@@ -397,11 +417,11 @@ article {
     .content-hint,
     #tipue_search_results_count {
         font-size: 18px;
-        margin-bottom: 0.7em;
+        margin-bottom: .7em;
     }
 
-    .h1,
     h1,
+    .h1,
     .tipue_search_content_title {
         font-size: 36px;
     }
@@ -415,6 +435,13 @@ article {
         }
     }
 
+    #navbar-menu {
+
+        .navbar-nav {
+            border: none;
+        }
+    }
+
     .tipue_search_content_url {
         font-size: 16px;
     }
@@ -424,3 +451,5 @@ article {
         font-size: 20px;
     }
 }
+
+@import "print";
