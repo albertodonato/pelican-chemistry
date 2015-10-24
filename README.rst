@@ -25,6 +25,9 @@ Name                     Value
                          ``CUSTOM_CSS = '/custom.css'``). This is not
                          prepended with ``SITEURL``.
 ``PAGES_ON_MENU``        If set to ``True``, include links to pages in menu.
+                         Pages can be sorted in the desired order by setting
+                         the ``index`` metadata in the page to an integer
+                         value.
 ``INDEXES_ON_MENU``      If set to ``True``, include a dropdown in menu with
                          links to index pages (categories, tags, archives,
                          feeds).
