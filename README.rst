@@ -24,7 +24,8 @@ Name                     Value
 ``CUSTOM_CSS``           Absolute URL for an additional CSS file (e.g.
                          ``CUSTOM_CSS = '/custom.css'``). This is not
                          prepended with ``SITEURL``.
-``INDEXES_DROPDOWN``     If set to ``True``, include a dropdown in menu with
+``PAGES_ON_MENU``        If set to ``True``, include links to pages in menu.
+``INDEXES_ON_MENU``      If set to ``True``, include a dropdown in menu with
                          links to index pages (categories, tags, archives,
                          feeds).
 ``SHOW_ARTICLE_AUTHOR``  Whether to show articles author(s) on the index

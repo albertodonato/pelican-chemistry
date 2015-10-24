@@ -10,7 +10,7 @@
       </div>
 
       <div id="navbar-menu" class="collapse navbar-collapse">
-        {% if DISPLAY_PAGES_ON_MENU %}
+        {% if PAGES_ON_MENU and PAGES %}
           <ul class="nav navbar-nav">
             {% for page in PAGES %}
               <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
@@ -36,23 +36,25 @@
             </li>
           {% endif %}
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="visible-xs-inline">Indexes</span>
-              <span class="fa fa-folder-o hidden-xs"></span>
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
-              <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
-              <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
-              {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
-                <li>
-                  <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
-                </li>
-              {% endif %}
-            </ul>
-          </li>
+          {% if INDEXES_ON_MENU %}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="visible-xs-inline">Indexes</span>
+                <span class="fa fa-folder-o hidden-xs"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
+                <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
+                <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+                {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
+                  <li>
+                    <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
+                  </li>
+                {% endif %}
+              </ul>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </div>
