@@ -74,15 +74,6 @@ header {
             margin: 0;
             border-bottom: @border;
 
-            .navbar-nav {
-
-                li {
-                    a {
-                        padding: 10px;
-                    }
-                }
-            }
-
             input[type='text'] {
                 margin: 2px 0 2px 10px;
                 border: none;
@@ -94,6 +85,19 @@ header {
                 &:focus {
                     outline: none;
                 }
+            }
+
+            .navbar-nav {
+
+                li {
+                    a {
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                background-color: @color-dark;
             }
         }
 

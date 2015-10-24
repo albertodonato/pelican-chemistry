@@ -10,14 +10,6 @@
       </div>
 
       <div id="navbar-menu" class="collapse navbar-collapse">
-        {% if LINKS %}
-          <ul class="nav navbar-nav">
-            {% for title, link in LINKS %}
-              <li><a href="{{ link }}">{{ title }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-
         {% if DISPLAY_PAGES_ON_MENU %}
           <ul class="nav navbar-nav">
             {% for page in PAGES %}
@@ -26,35 +18,42 @@
           </ul>
         {% endif %}
 
-        <ul class="nav navbar-nav">
-          {% if CATEGORIES_LINK_ON_MENU %}
-            <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
-          {% endif %}
+        {% if LINKS %}
+          <ul class="nav navbar-nav">
+            {% for title, link in LINKS %}
+              <li><a href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
 
-          {% if TAGS_LINK_ON_MENU %}
-            <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
-          {% endif %}
-
-          {% if ARCHIVES_LINK_ON_MENU %}
-            <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
-          {% endif %}
-
-          {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
-            <li>
-              <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
-            </li>
-          {% endif %}
-        </ul>
-        {% if 'tipue_search' in PLUGINS %}
-          <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+          {% if 'tipue_search' in PLUGINS %}
             <li>
               <form action="{{ SITEURL }}/search.html">
                 <input type="text" id="tipue_search_input"
                        name="q" autocomplete="off" placeholder="Search" required>
               </form>
             </li>
-          </ul>
-        {% endif %}
+          {% endif %}
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="visible-xs-inline">Indexes</span>
+              <span class="fa fa-folder-o hidden-xs"></span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
+              <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
+              <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+              {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
+                <li>
+                  <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
+                </li>
+              {% endif %}
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
