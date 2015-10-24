@@ -10,36 +10,33 @@ Theme-specific settings
 
 The theme provides the following additional settings:
 
-===========================  ==================================================
-Name                         Value
-===========================  ==================================================
-``TAGLINE``                  A text to display below the site title.
-``LICENSE_NAME``             License to display in the page footer (e.g.
-                             ``LICENSE_NAME = 'CC BY-SA 4.0'``)
-``LICENSE_URL``              License URL. Should be set if the license name is
-                             set.
-``FAVICON_URL``              URL for the favicon (e.g.
-                             ``FAVICON_URL = '/favicon.png'``). This is not
-                             prepended with SITEURL.
-``CUSTOM_CSS``               Absolute URL for an additional CSS file (e.g.
-                             ``CUSTOM_CSS = '/custom.css'``). This is not
-                             prepended with ``SITEURL``.
-``ARCHIVES_LINK_ON_MENU``    Whether to include a link to the archives page in
-                             the menu.
-``CATEGORIES_LINK_ON_MENU``  Whether to include a link to the categories page
-                             in the menu.
-``TAGS_LINK_ON_MENU``        Whether to include a link to the tags page in the
-                             menu.
-``SHOW_ARTICLE_AUTHOR``      Whether to show articles author(s) on the index
-                             page.
-``LOCAL_RESOURCES``          If set to ``True``, local resources are used
-                             instead of CDN ones for CSS.
-``GOOGLE_ANALYTICS``         The Google Analytics id for the site.
-``DISQUS_SITENAME``          The Disqus site name to enable embedded comments
-                             embedding in posts.
-``GOOGLEPLUS_COMMENTS``      If set to ``True``, enable Google+ comments section
-                             in posts.
-===========================  ==================================================
+=======================  ===================================================
+Name                     Value
+=======================  ===================================================
+``TAGLINE``              A text to display below the site title.
+``LICENSE_NAME``         License to display in the page footer (e.g.
+                         ``LICENSE_NAME = 'CC BY-SA 4.0'``)
+``LICENSE_URL``          License URL. Should be set if the license name is
+                         set.
+``FAVICON_URL``          URL for the favicon (e.g.
+                         ``FAVICON_URL = '/favicon.png'``). This is not
+                         prepended with SITEURL.
+``CUSTOM_CSS``           Absolute URL for an additional CSS file (e.g.
+                         ``CUSTOM_CSS = '/custom.css'``). This is not
+                         prepended with ``SITEURL``.
+``INDEXES_DROPDOWN``     If set to ``True``, include a dropdown in menu with
+                         links to index pages (categories, tags, archives,
+                         feeds).
+``SHOW_ARTICLE_AUTHOR``  Whether to show articles author(s) on the index
+                         page.
+``LOCAL_RESOURCES``      If set to ``True``, local resources are used
+                         instead of CDN ones for CSS.
+``GOOGLE_ANALYTICS``     The Google Analytics id for the site.
+``DISQUS_SITENAME``      The Disqus site name to enable embedded comments
+                         embedding in posts.
+``GOOGLEPLUS_COMMENTS``  If set to ``True``, enable Google+ comments
+                         section in posts.
+=======================  ===================================================
 
 
 Supported plugins
