@@ -1,6 +1,11 @@
 @import "variables";
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     background-color: @color-light;
     color: @color-text;
     font-family: @font;
@@ -66,6 +71,7 @@ a {
 }
 
 header {
+    padding-top: @navbar-menu-height;
 
     nav {
 
@@ -117,7 +123,6 @@ header {
 
     .title-area {
         background-color: @color-text;
-        margin-top: @navbar-menu-height;
         
         .title {
             margin: 40px 0;
@@ -142,6 +147,7 @@ header {
 }
 
 footer {
+    height: @footer-height;
     border-top: @border;
     padding: @top-elements-spacing;
     text-align: center;
@@ -156,6 +162,16 @@ footer {
 
 main {
     margin: @top-elements-spacing;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto;
+    margin-bottom: -@footer-height;
+}
+
+#push {
+    height: @footer-height;
 }
 
 article {
