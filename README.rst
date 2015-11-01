@@ -21,9 +21,9 @@ Name                     Value
 ``FAVICON_URL``          URL for the favicon (e.g.
                          ``FAVICON_URL = '/favicon.png'``). This is not
                          prepended with SITEURL.
-``CUSTOM_CSS``           Absolute URL for an additional CSS file (e.g.
-                         ``CUSTOM_CSS = '/custom.css'``). This is not
-                         prepended with ``SITEURL``.
+``CUSTOM_CSS``           URL for an additional CSS file (e.g.
+                         ``CUSTOM_CSS = 'custom.css'``). This is prepended
+                         with ``SITEURL``.
 ``PAGES_ON_MENU``        If set to ``True``, include links to pages in menu.
                          Pages can be sorted in the desired order by setting
                          the ``index`` metadata in the page to an integer
