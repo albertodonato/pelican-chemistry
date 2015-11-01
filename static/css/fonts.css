@@ -2,25 +2,19 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 300;
-  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(https://fonts.gstatic.com/s/ubuntu/v7/_aijTyevf54tkVDLy-dlnKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(https://fonts.gstatic.com/s/ubuntu/v8/_aijTyevf54tkVDLy-dlnKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu'), url(https://fonts.gstatic.com/s/ubuntu/v7/2Q-AW1e_taO6pHwMXcXW5w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(https://fonts.gstatic.com/s/ubuntu/v7/OsJ2DjdpjqFRVUSto6IffKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+  src: local('Ubuntu'), url(https://fonts.gstatic.com/s/ubuntu/v8/2Q-AW1e_taO6pHwMXcXW5w.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Ubuntu';
   font-style: italic;
-  font-weight: 500;
-  src: local('Ubuntu Medium Italic'), local('Ubuntu-MediumItalic'), url(https://fonts.gstatic.com/s/ubuntu/v7/ohKfORL_YnhBMzkCPoIqwp0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+  font-weight: 300;
+  src: local('Ubuntu Light Italic'), local('Ubuntu-LightItalic'), url(https://fonts.gstatic.com/s/ubuntu/v8/DZ_YjBPqZ88vcZCcIXm6Vp0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Ubuntu Mono';
