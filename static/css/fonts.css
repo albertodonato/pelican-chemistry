@@ -12,15 +12,21 @@
 }
 @font-face {
   font-family: 'Ubuntu';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Ubuntu Light Italic'), local('Ubuntu-LightItalic'), url('../fonts/Ubuntu/Ubuntu-LightItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url('../fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Ubuntu';
   font-style: italic;
   font-weight: 400;
   src: local('Ubuntu Italic'), local('Ubuntu-Italic'), url('../fonts/Ubuntu/Ubuntu-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Ubuntu Medium Italic'), local('Ubuntu-MediumItalic'), url('../fonts/Ubuntu/Ubuntu-MediumItalic.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Ubuntu Mono';
