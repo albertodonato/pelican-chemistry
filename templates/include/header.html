@@ -30,7 +30,7 @@
         <ul class="nav navbar-nav navbar-right">
           {% if 'tipue_search' in PLUGINS %}
             <li>
-              <form action="{{ SITEURL }}/search.html">
+              <form action="{{ SITEURL }}/{{ SEARCH_URL | default('/search.html') }}">
                 <input type="text" id="tipue_search_input"
                        name="q" autocomplete="off" placeholder="Search" required>
               </form>
@@ -45,9 +45,9 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="{{ SITEURL }}/categories.html">Categories</a></li>
-                <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
-                <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+                <li><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}">Categories</a></li>
+                <li><a href="{{ SITEURL }}/{{ TAGS_URL }}">Tags</a></li>
+                <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archives</a></li>
                 {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
                   <li>
                     <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
