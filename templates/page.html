@@ -7,13 +7,13 @@
     <meta name="author" content="{{ page.author }}">
   {% endif %}
   {% if page.summary %}
-    <meta name="description" content="{{ page.summary|striptags }}">
+    <meta name="description" content="{{ page.summary | striptags }}">
   {% endif %}
   <meta name="tags" contents="{% for tag in page.tags %}{{ tag }}, {% endfor %}">
 {% endblock %}
 
 {% block title %}
-  {{ SITENAME }} &mdash; {{ page.title|striptags }}
+  {{ SITENAME }} &mdash; {{ page.title | striptags }}
 {% endblock %}
 
 {% block content %}

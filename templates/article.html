@@ -7,19 +7,19 @@
     <meta name="author" content="{{ article.author }}">
   {% endif %}
   {% if article.summary %}
-    <meta name="description" content="{{ article.summary|striptags }}">
+    <meta name="description" content="{{ article.summary | striptags }}">
   {% endif %}
   <meta name="tags" contents="{% for tag in article.tags %}{{ tag }}, {% endfor %}">
 {% endblock %}
 
 {% block title %}
-  {{ SITENAME }} &mdash; {{ article.title|striptags }}
+  {{ SITENAME }} &mdash; {{ article.title | striptags }}
 {% endblock %}
 
 {% block content %}
   <article class="{{ article.status }}">
     <h1 class="post-title">
-      <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+      <a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title | striptags }}">{{ article.title }}</a>
     </h1>
     <div class="post-details">
       <ul class="list-inline list-separated list-separated-dot">
@@ -31,7 +31,7 @@
         </li>
         {% if article.tags %}
           <li class="post-tags">
-            {% for tag in article.tags|sort %}
+            {% for tag in article.tags | sort %}
               <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}
           </li>

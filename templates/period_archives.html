@@ -1,0 +1,17 @@
+{# -*- mode: jinja2 -*- #}
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ SITENAME }} &mdash; Archives for {{ period | reverse | join(' ') }}
+{% endblock %}
+
+{% block content %}
+  <h1>Archives for {{ period | reverse | join(' ') }}</h1>
+
+  <dl class="list-index">
+    {% for article in dates %}
+      <dt>{{ article.locale_date }}</dt>
+      <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+    {% endfor %}
+  </dl>
+{% endblock %}

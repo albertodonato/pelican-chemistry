@@ -9,10 +9,10 @@
   <h1>Tags</h1>
 
   <ul class="list-unstyled list-index">
-    {% for tag, articles in tags|sort %}
+    {% for tag, articles in tags | sort %}
     <li>
       <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-      <span class="badge">{{ articles|count }}</span>
+      <span class="badge">{{ articles | count }}</span>
     </li>
     {% endfor %}
   </ul>

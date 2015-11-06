@@ -13,7 +13,7 @@
       <div id="navbar-menu" class="collapse navbar-collapse">
         {% if PAGES_ON_MENU and PAGES %}
           <ul class="nav navbar-nav">
-            {% for page in PAGES|sort(attribute='index') %}
+            {% for page in PAGES | sort(attribute='index') %}
               <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
             {% endfor %}
           </ul>
