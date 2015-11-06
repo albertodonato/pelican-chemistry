@@ -31,6 +31,9 @@ Name                     Value
 ``INDEXES_ON_MENU``      If set to ``True``, include a dropdown in menu with
                          links to index pages (categories, tags, archives,
                          feeds).
+``SEARCH_URL``           The relative URL of the search page (``search.html``
+                         by default). Used if the ``tipue_search`` plugin is
+                         enabled (see below).
 ``SHOW_ARTICLE_AUTHOR``  Whether to show articles author(s) on the index
                          page.
 ``LOCAL_RESOURCES``      If set to ``True``, local resources are used
