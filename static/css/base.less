@@ -200,7 +200,7 @@ article {
         font-size: 13px;
 
         .post-date {
-                color: lighten(@color-text, 40%);
+            color: lighten(@color-text, 40%);
         }
     }
 
@@ -293,6 +293,15 @@ article {
     margin-top: 2em;
     padding-top: 2em;
     border-top: @border;
+}
+
+.list-count > li {
+    padding-bottom: 5px;
+    border-bottom: @border;
+
+    .count {
+        float: right;
+    }
 }
 
 .pager li a {

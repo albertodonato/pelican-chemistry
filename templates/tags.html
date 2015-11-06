@@ -8,12 +8,14 @@
 {% block content %}
   <h1>Tags</h1>
 
-  <ul class="list-unstyled list-index">
+  <ul class="list-unstyled list-index list-count">
     {% for tag, articles in tags | sort %}
-    <li>
-      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-      <span class="badge">{{ articles | count }}</span>
-    </li>
+      <li>
+        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+        <span class="count">
+          <span class="badge">{{ articles | count }}</span>
+        </span>
+      </li>
     {% endfor %}
   </ul>
 {% endblock %}
