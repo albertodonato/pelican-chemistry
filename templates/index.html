@@ -16,11 +16,7 @@
       <div class="post-details">
         <ul class="list-inline list-separated list-separated-dot">
           <li class="post-date">
-            <time>
-              <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.date.isoformat() }}">
-                {{ article.locale_date }}
-              </a>
-            </time>
+            <time>{{ article.locale_date }}</time>
           </li>
           <li class="post-category">
             <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
