@@ -38,11 +38,7 @@
         </ul>
       </div>
       <div class="post-content">
-        {% if article.summary %}
-          {{ article.summary | striptags }}
-        {% else %}
-          {{ article.content | striptags | truncate(256) }}
-        {% endif %}
+        {{ article.summary }}
       </div>
 
       <nav class="hidden-print">
