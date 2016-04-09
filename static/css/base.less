@@ -241,12 +241,16 @@ article {
             opacity: 0;
         }
 
-        h2:hover .headerlink {
-            opacity: 1;
-            transition: opacity .2s ease-in-out;
+        h2 {
+            margin-top: 1.5em;
 
-            &:hover {
-                border-bottom: 0;
+            &:hover .headerlink {
+                opacity: 1;
+                transition: opacity .2s ease-in-out;
+
+                &:hover {
+                    border-bottom: 0;
+                }
             }
         }
 
