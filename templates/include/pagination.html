@@ -1,7 +1,7 @@
 {# -*- mode: jinja2 -*- #}
 {% if DEFAULT_PAGINATION %}
 <div>{{ articles_page }}</div>
-  <nav>
+  <nav class="hidden-print">
     <ul class="pager">
       {% if articles_page.has_previous() %}
         <li class="previous">
