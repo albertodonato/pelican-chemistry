@@ -227,6 +227,10 @@ article {
                 a {
                     float: right;
                     margin-right: 1em;
+
+                    &::after {
+                        content: "›";
+                    }
                 }
             }
         }
@@ -319,10 +323,23 @@ article {
     }
 }
 
-.pager li a {
-    transition: none;
-    border-radius: 4px;
+.pager li {
+    a {
+        transition: none;
+        border-radius: 4px;
+    }
+
+    &.previous a::before {
+        margin-right: 0.2em;
+        content: "‹";
+    }
+
+    &.next a::after {
+        margin-left: 0.2em;
+        content: "›";
+    }
 }
+
 
 .list-separated > li {
     padding: 0;
