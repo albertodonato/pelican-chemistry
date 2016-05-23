@@ -107,9 +107,13 @@ header {
             .dropdown-menu {
                 background-color: @color-dark;
 
-                &>li>a:hover {
-                    background-color: inherit;
-                    color: @color-link;
+                &>li>a {
+                    font-weight: @font-weight-light;
+
+                    &:hover {
+                        background-color: inherit;
+                        color: @color-link;
+                    }
                 }
             }
         }
