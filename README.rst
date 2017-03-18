@@ -49,6 +49,9 @@ Name                     Value
 Supported plugins
 -----------------
 
+The theme supports some plugins form `pelican-plugins
+<https://github.com/getpelican/pelican-plugins`_.
+
 headerid
 ~~~~~~~~
 
@@ -75,8 +78,7 @@ you can rebuild the minified theme file with::
 
   $ make css
 
-Rebuilding CSS requires ``less`` and ``less-plugin-clean-css`` (they can be
-installed via ``npm``).
+Rebuilding CSS requires ``less`` and ``cleancss``.
   
 Syntax highlight is done through `pygments <http://pygments.org/>`_. The
 default theme can be changed regenerating the pygments CSS file::
