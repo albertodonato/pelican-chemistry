@@ -50,7 +50,7 @@ Supported plugins
 -----------------
 
 The theme supports some plugins form `pelican-plugins
-<https://github.com/getpelican/pelican-plugins>`_
+<https://github.com/getpelican/pelican-plugins>`_.
 
 headerid
 ~~~~~~~~
