@@ -1,18 +1,25 @@
 STATICDIR = static
 
+DEPENDENCIES = less less-plugin-clean-css
+
+NODE_PATH=node_modules/.bin
+
 CSSDIR = $(STATICDIR)/css
 CSS = $(CSSDIR)/style.min.css
 LESS_CSS = $(wildcard $(CSSDIR)/*.less)
+
 PYGMENTS_CSS = $(CSSDIR)/pygments.min.css
 PYGMENTS_STYLE ?= default
 
-build_css = lessc $1 | cleancss -o $2
-
+build_css = $(NODE_PATH)/lessc $1 --clean-css="--s1 --advanced --compatibility=ie8" > $2
 
 css: $(CSS) $(PYGMENTS_CSS)
 
 pygments $(PYGMENTS_CSS):
 	pygmentize -S $(PYGMENTS_STYLE) -f html | $(call build_css, -, $(PYGMENTS_CSS))
+
+deps:
+	npm install $(DEPENDENCIES)
 
 $(CSS): $(LESS_CSS)
 

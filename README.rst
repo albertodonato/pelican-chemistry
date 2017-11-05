@@ -2,7 +2,7 @@
 pelican-chemistry
 =================
 
-A minimalistic responsive `Pelican <http://blog.getpelican.com/>`_ theme.
+A minimalistic responsive Pelican_ theme.
 
 
 Theme-specific settings
@@ -49,22 +49,19 @@ Name                     Value
 Supported plugins
 -----------------
 
-The theme supports some plugins form `pelican-plugins
-<https://github.com/getpelican/pelican-plugins>`_.
+The theme supports some plugins from pelican-plugins_.
 
 headerid
 ~~~~~~~~
 
-The theme supports styling header links from the `headerid
-<https://github.com/getpelican/pelican-plugins/tree/master/headerid>`_
-plugin. Anchors for permalinks to paragraphs are shown on hover on titles.
+The theme supports styling header links from the headerid_ plugin. Anchors for
+permalinks to paragraphs are shown on hover on titles.
 
 tipue_search
 ~~~~~~~~~~~~
 
-If the `tipue_search
-<https://github.com/getpelican/pelican-plugins/tree/master/tipue_search>`_
-plugin is enabled, a search box is shown in pages and search is available.
+If the `tipue_search`_ plugin is enabled, a search box is shown in pages and
+search is available.
 
 Note that you need to add ``"search"`` to ``DIRECT_TEMPLATES`` for the search
 results page to work.
@@ -73,14 +70,27 @@ results page to work.
 Rebuild CSS
 -----------
 
+Rebuilding CSS requires ``less`` and ``less-plugin-clean-css``, which are
+available on npm_. These can be installed with::
+
+  $ make deps
+
 The theme CSS is located in ``static/css/style.less``. If you make any changes,
 you can rebuild the minified theme file with::
 
   $ make css
 
-Rebuilding CSS requires ``less`` and ``cleancss``.
-  
-Syntax highlight is done through `pygments <http://pygments.org/>`_. The
-default theme can be changed regenerating the pygments CSS file::
+Syntax highlight is done through Pygments_. The default theme can be changed
+regenerating the pygments CSS file::
 
   $ PYGMENTS_STYLE=<style-name> make pygments
+
+
+.. _Pelican: http://blog.getpelican.com/
+.. _pelican-plugins: https://github.com/getpelican/pelican-plugins
+.. _headerid:
+   https://github.com/getpelican/pelican-plugins/tree/master/headerid
+.. _tipue_search:
+   https://github.com/getpelican/pelican-plugins/tree/master/tipue_search
+.. _npm: https://www.npmjs.com/
+.. _Pygments: http://pygments.org/
