@@ -16,11 +16,11 @@ Name                     Value
 ``TAGLINE``              A text to display below the site title.
 ``LICENSE_NAME``         License to display in the page footer (e.g.
                          ``LICENSE_NAME = 'CC BY-SA 4.0'``)
-``LICENSE_URL``          License URL. Should be set if the license name is
-                         set.
+``LICENSE_URL``          License URL. Should be set if the ``LICENSE_NAME``
+                         is set.
 ``FAVICON_URL``          URL for the favicon (e.g.
                          ``FAVICON_URL = '/favicon.png'``). This is not
-                         prepended with SITEURL.
+                         prepended with ``SITEURL``.
 ``CUSTOM_CSS``           URL for an additional CSS file (e.g.
                          ``CUSTOM_CSS = 'custom.css'``). This is prepended
                          with ``SITEURL``.
@@ -37,11 +37,11 @@ Name                     Value
 ``SHOW_ARTICLE_AUTHOR``  Whether to show articles author(s) on the index
                          page.
 ``LOCAL_RESOURCES``      If set to ``True``, local resources are used
-                         instead of CDN ones for CSS.
-``GOOGLE_ANALYTICS``     The Google Analytics id for the site.
-``DISQUS_SITENAME``      The Disqus site name to enable embedded comments
+                         instead of CDN ones for CSS (for developemnt).
+``GOOGLE_ANALYTICS``     The `Google Analytics`_ id for the site.
+``DISQUS_SITENAME``      The Disqus_ site name to enable embedded comments
                          embedding in posts.
-``GOOGLEPLUS_COMMENTS``  If set to ``True``, enable Google+ comments
+``GOOGLEPLUS_COMMENTS``  If set to ``True``, enable `Google+`_ comments
                          section in posts.
 =======================  ===================================================
 
@@ -73,20 +73,23 @@ Rebuild CSS
 Rebuilding CSS requires ``less`` and ``less-plugin-clean-css``, which are
 available on npm_. These can be installed with::
 
-  $ make deps
+  make deps
 
 The theme CSS is located in ``static/css/style.less``. If you make any changes,
 you can rebuild the minified theme file with::
 
-  $ make css
+  make css
 
 Syntax highlight is done through Pygments_. The default theme can be changed
-regenerating the pygments CSS file::
+regenerating the pygments CSS file with::
 
-  $ PYGMENTS_STYLE=<style-name> make pygments
+  PYGMENTS_STYLE=<style-name> make pygments
 
 
 .. _Pelican: http://blog.getpelican.com/
+.. _`Google Analytics`: https://analytics.google.com/
+.. _Disqus: https://disqus.com/
+.. _`Google+`: https://plus.google.com/
 .. _pelican-plugins: https://github.com/getpelican/pelican-plugins
 .. _headerid:
    https://github.com/getpelican/pelican-plugins/tree/master/headerid
