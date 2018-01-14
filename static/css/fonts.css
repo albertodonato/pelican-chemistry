@@ -1,41 +1,36 @@
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url('../fonts/Roboto-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local('Ubuntu Light'), local('Ubuntu-Light'), url('../fonts/Ubuntu-Light.ttf') format('truetype');
+  src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/Roboto-Light.ttf') format('truetype');
 }
-
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu'), url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
-
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url('../fonts/Ubuntu-Medium.ttf') format('truetype');
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/Roboto-Medium.ttf') format('truetype');
 }
-
 @font-face {
-  font-family: 'Ubuntu';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Ubuntu Italic'), local('Ubuntu-Italic'), url('../fonts/Ubuntu-Italic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: italic;
-  font-weight: 500;
-  src: local('Ubuntu Medium Italic'), local('Ubuntu-MediumItalic'), url('../fonts/Ubuntu-MediumItalic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Ubuntu Mono';
+  font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url('../fonts/UbuntuMono-Regular.ttf') format('truetype');
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url('../fonts/RobotoMono-Regular.ttf') format('truetype');
 }
