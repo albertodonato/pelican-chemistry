@@ -1,8 +1,9 @@
-=================
-pelican-chemistry
-=================
+===================================================
+chemistry - A minimalistic responsive Pelican theme
+===================================================
 
-A minimalistic responsive Pelican_ theme.
+Chemistry is theme for the Pelican_ static website generator which aims at
+being minimalistic, but also easily tunable and extensible.
 
 
 Theme-specific settings
@@ -37,7 +38,7 @@ Name                     Value
 ``SHOW_ARTICLE_AUTHOR``  Whether to show articles author(s) on the index
                          page.
 ``LOCAL_RESOURCES``      If set to ``True``, local resources are used
-                         instead of CDN ones for CSS (for developemnt).
+                         instead of CDN ones for CSS (for development).
 ``GOOGLE_ANALYTICS``     The `Google Analytics`_ id for the site.
 ``DISQUS_SITENAME``      The Disqus_ site name to enable embedded comments
                          embedding in posts.
@@ -63,7 +64,7 @@ tipue_search
 If the `tipue_search`_ plugin is enabled, a search box is shown in pages and
 search is available.
 
-Note that you need to add ``"search"`` to ``DIRECT_TEMPLATES`` for the search
+Note that you need to add ``'search'`` to ``DIRECT_TEMPLATES`` for the search
 results page to work.
 
 
@@ -83,7 +84,7 @@ you can rebuild the minified theme file with::
 Syntax highlight is done through Pygments_. The default theme can be changed
 regenerating the pygments CSS file with::
 
-  PYGMENTS_STYLE=<style-name> make pygments
+  make pygments PYGMENTS_STYLE=<style-name>
 
 
 .. _Pelican: http://blog.getpelican.com/

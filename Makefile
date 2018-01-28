@@ -2,7 +2,7 @@ STATICDIR = static
 
 DEPENDENCIES = less less-plugin-clean-css
 
-NODE_PATH=node_modules/.bin
+NODE_PATH = node_modules/.bin
 
 CSSDIR = $(STATICDIR)/css
 CSS = $(CSSDIR)/style.min.css
@@ -27,4 +27,4 @@ $(CSS): $(LESS_CSS)
 %.min.css: %.less
 	$(call build_css, $<, $@)
 
-.PHONY: css pygments
+.PHONY: css pygments deps
