@@ -42,8 +42,6 @@ Name                     Value
 ``GOOGLE_ANALYTICS``     The `Google Analytics`_ id for the site.
 ``DISQUS_SITENAME``      The Disqus_ site name to enable embedded comments
                          embedding in posts.
-``GOOGLEPLUS_COMMENTS``  If set to ``True``, enable `Google+`_ comments
-                         section in posts.
 =======================  ===================================================
 
 
