@@ -13,6 +13,9 @@
       {% if FAVICON_URL %}
         <link rel="icon" href="{{ FAVICON_URL }}">
       {% endif %}
+      {% if MASTODON_LINK %}
+        <link rel="me" href="{{ MASTODON_LINK }}">
+      {% endif %}
       {% include 'include/rss.html' %}
       {% include 'include/css.html' %}
       {% include 'include/js.html' %}

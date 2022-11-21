@@ -42,6 +42,7 @@ Name                     Value
 ``GOOGLE_ANALYTICS``     The `Google Analytics`_ id for the site.
 ``DISQUS_SITENAME``      The Disqus_ site name to enable embedded comments
                          embedding in posts.
+``MASTODON_LINK``        Mastodon link, for verification.
 =======================  ===================================================
 
 
