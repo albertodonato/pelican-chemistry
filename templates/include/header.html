@@ -5,7 +5,7 @@
 
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
-          <span class="fa fa-bars navbar-toggle-content"></span>
+          <span class="fas fa-bars navbar-toggle-content"></span>
         </button>
         <a class="navbar-brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
       </div>
@@ -41,7 +41,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="visible-xs-inline">Indexes</span>
-                <span class="fa fa-bars hidden-xs" aria-hidden="true"></span>
+                <span class="fas fa-bars hidden-xs" aria-hidden="true"></span>
               </a>
               <ul class="dropdown-menu">
                 <li><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}">Categories</a></li>
@@ -49,7 +49,9 @@
                 <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archives</a></li>
                 {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
                   <li>
-                    <a class="fa fa-rss" href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"></a>
+                    <a href="{{ SITEURL }}/{% if FEED_ALL_ATOM %}{{ FEED_ALL_ATOM }}{% else %}{{ FEED_ALL_RSS }}{% endif %}">
+                      <span class="fas fa-rss"></span>
+                    </a>
                   </li>
                 {% endif %}
               </ul>
