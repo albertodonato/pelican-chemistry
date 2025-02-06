@@ -40,8 +40,6 @@ Name                     Value
 ``LOCAL_RESOURCES``      If set to ``True``, local resources are used
                          instead of CDN ones for CSS (for development).
 ``GOOGLE_ANALYTICS``     The `Google Analytics`_ id for the site.
-``DISQUS_SITENAME``      The Disqus_ site name to enable embedded comments
-                         embedding in posts.
 ``MASTODON_LINK``        Mastodon link, for verification.
 =======================  ===================================================
 
@@ -88,7 +86,6 @@ regenerating the pygments CSS file with::
 
 .. _Pelican: http://blog.getpelican.com/
 .. _`Google Analytics`: https://analytics.google.com/
-.. _Disqus: https://disqus.com/
 .. _`Google+`: https://plus.google.com/
 .. _pelican-plugins: https://github.com/getpelican/pelican-plugins
 .. _headerid:
