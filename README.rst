@@ -41,18 +41,6 @@ Name                     Value
 =======================  ===================================================
 
 
-Supported plugins
------------------
-
-The theme supports some plugins from pelican-plugins_.
-
-headerid
-~~~~~~~~
-
-The theme supports styling header links from the headerid_ plugin. Anchors for
-permalinks to paragraphs are shown on hover on titles.
-
-
 Rebuild CSS
 -----------
 
@@ -75,8 +63,5 @@ regenerating the pygments CSS file with::
 .. _Pelican: http://blog.getpelican.com/
 .. _`Google Analytics`: https://analytics.google.com/
 .. _`Google+`: https://plus.google.com/
-.. _pelican-plugins: https://github.com/getpelican/pelican-plugins
-.. _headerid:
-   https://github.com/getpelican/pelican-plugins/tree/master/headerid
 .. _npm: https://www.npmjs.com/
 .. _Pygments: http://pygments.org/
