@@ -88,7 +88,6 @@ header {
     padding-top: @navbar-menu-height;
 
     nav {
-
         &.navbar {
             min-height: @navbar-menu-height;
             margin: 0;
@@ -109,7 +108,6 @@ header {
             }
 
             .navbar-nav {
-
                 li {
                     a {
                         padding: 10px;
@@ -135,8 +133,9 @@ header {
         font-size: 17px;
 
         .navbar-brand {
+            margin-right: 3em;
             height: auto;
-            font-weight: @font-weight-bold;
+            font-weight: @font-weight-bolder;
             font-style: italic;
         }
 
@@ -179,31 +178,6 @@ main {
 
 #push {
     height: @footer-height;
-}
-
-#title-area {
-    background-color: @color-text;
-
-    .title {
-        margin: 40px 0;
-
-        h1 {
-            margin: 0;
-            font-weight: @font-weight-bold;
-            font-size: 28px;
-
-            a {
-                color: @color-light;
-            }
-        }
-
-        h2 {
-            margin: 0 0 0 1em;
-            font-size: 20px;
-            font-style: italic;
-            color: #bbb;
-        }
-    }
 }
 
 article {

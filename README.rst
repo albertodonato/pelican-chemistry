@@ -14,7 +14,6 @@ The theme provides the following additional settings:
 =======================  ===================================================
 Name                     Value
 =======================  ===================================================
-``TAGLINE``              A text to display below the site title.
 ``LICENSE_NAME``         License to display in the page footer (e.g.
                          ``LICENSE_NAME = 'CC BY-SA 4.0'``)
 ``LICENSE_URL``          License URL. Should be set if the ``LICENSE_NAME``
