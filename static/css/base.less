@@ -30,8 +30,7 @@ h6,
 }
 
 h1,
-.h1,
-.tipue_search_content_title {
+.h1 {
     font-size: 25px;
     margin-top: 0;
     font-weight: @font-weight-light;
@@ -326,14 +325,9 @@ article {
     max-width: 960px;
 }
 
-.content-hint,
-#tipue_search_results_count {
+.content-hint { 
     font-size: 14px;
     margin-bottom: 0;
-}
-
-#tipue_search_image_modal {
-    display: none;
 }
 
 .comments {
@@ -422,33 +416,4 @@ article {
             }
         }
     }
-}
-
-.tipue_search_content_title {
-    margin-top: .5em;
-}
-
-.tipue_search_content_url {
-    margin-left: 1em;
-
-    a {
-        color: lighten(@color-text, 40%);
-    }
-}
-
-.tipue_search_content_text {
-    border-bottom: @border;
-    padding: 1em 0;
-
-    &:last-child {
-        border-bottom: none;
-    }
-}
-
-#tipue_search_warning {
-    margin: .3em 0;
-}
-
-#tipue_search_input {
-    width: 10em;
 }

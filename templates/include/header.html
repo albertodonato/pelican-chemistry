@@ -28,15 +28,6 @@
         {% endif %}
 
         <ul class="nav navbar-nav navbar-right">
-          {% if 'tipue_search' in PLUGINS %}
-            <li>
-              <form action="{{ SITEURL }}/{{ SEARCH_URL | default('/search.html') }}">
-                <input type="search" id="tipue_search_input"
-                       name="q" autocomplete="off" placeholder="Search" required>
-              </form>
-            </li>
-          {% endif %}
-
           {% if INDEXES_ON_MENU %}
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

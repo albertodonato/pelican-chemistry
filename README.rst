@@ -32,9 +32,6 @@ Name                     Value
 ``INDEXES_ON_MENU``      If set to ``True``, include a dropdown in menu with
                          links to index pages (categories, tags, archives,
                          feeds).
-``SEARCH_URL``           The relative URL of the search page (``search.html``
-                         by default). Used if the ``tipue_search`` plugin is
-                         enabled (see below).
 ``SHOW_ARTICLE_AUTHOR``  Whether to show articles author(s) on the index
                          page.
 ``LOCAL_RESOURCES``      If set to ``True``, local resources are used
@@ -54,15 +51,6 @@ headerid
 
 The theme supports styling header links from the headerid_ plugin. Anchors for
 permalinks to paragraphs are shown on hover on titles.
-
-tipue_search
-~~~~~~~~~~~~
-
-If the `tipue_search`_ plugin is enabled, a search box is shown in pages and
-search is available.
-
-Note that you need to add ``'search'`` to ``DIRECT_TEMPLATES`` for the search
-results page to work.
 
 
 Rebuild CSS
@@ -90,7 +78,5 @@ regenerating the pygments CSS file with::
 .. _pelican-plugins: https://github.com/getpelican/pelican-plugins
 .. _headerid:
    https://github.com/getpelican/pelican-plugins/tree/master/headerid
-.. _tipue_search:
-   https://github.com/getpelican/pelican-plugins/tree/master/tipue_search
 .. _npm: https://www.npmjs.com/
 .. _Pygments: http://pygments.org/
