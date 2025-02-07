@@ -6,7 +6,8 @@ NODE_PATH = node_modules/.bin
 
 CSSDIR = $(STATICDIR)/css
 CSS = $(CSSDIR)/style.min.css
-LESS_CSS = $(wildcard $(CSSDIR)/*.less)
+LESSDIR = less
+LESS_CSS = $(wildcard $(LESSDIR)/*.less)
 
 PYGMENTS_CSS = $(CSSDIR)/pygments.min.css
 PYGMENTS_STYLE ?= default
@@ -24,7 +25,7 @@ deps:
 $(CSS): $(LESS_CSS)
 
 %.min.css: %.css
-%.min.css: %.less
+$(CSSDIR)/%.min.css: $(LESSDIR)/%.less
 	$(call build_css, $<, $@)
 
 .PHONY: css pygments deps
