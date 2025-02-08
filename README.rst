@@ -33,8 +33,6 @@ Name                     Value
                          feeds).
 ``SHOW_ARTICLE_AUTHOR``  Whether to show articles author(s) on the index
                          page.
-``LOCAL_RESOURCES``      If set to ``True``, local resources are used
-                         instead of CDN ones for CSS (for development).
 ``GOOGLE_ANALYTICS``     The `Google Analytics`_ id for the site.
 ``MASTODON_LINK``        Mastodon link, for verification.
 =======================  ===================================================
