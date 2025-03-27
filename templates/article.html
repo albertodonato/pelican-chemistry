@@ -12,9 +12,9 @@
   <meta name="tags" contents="{% for tag in article.tags %}{{ tag }}, {% endfor %}">
 {% endblock %}
 
-{% block title %}
+{% block title -%}
   {{ SITENAME }} &mdash; {{ article.title | striptags }}
-{% endblock %}
+{%- endblock %}
 
 {% block content %}
   <article class="{{ article.status }}">
